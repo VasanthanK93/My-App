@@ -1,0 +1,255 @@
+/*========================================================================*/
+
+
+/*Stylesheet which applies only for VF Sales Module only*/
+
+
+/*========================================================================*/
+
+.label-uppercase {
+    text-transform: uppercase;
+}
+
+.pshc-modal-window {
+    overflow: hidden;
+}
+
+.pshc-modal-window .modal-lg {
+    width: 95%;
+}
+
+.pshc-modal-window .modal-lg .rt-show .rt-block {
+    width: 300px;
+}
+
+.pshc-modal-window .lt-block,
+.lt-block-less {
+    width: 100%
+}
+
+.pshc-modal-window .lt-block .p-animate.showAnimate.sidebar-wrapper+.content-wrapper {
+    width: 75%
+}
+
+.pshc-modal-window .lt-block .p-animate.hideAnimate.sidebar-wrapper+.content-wrapper {
+    width: 83%
+}
+
+.pshc-modal-window .rt-hide .lt-block .p-animate.sidebar-wrapper:not(.hideAnimate)+.content-wrapper,
+.rt-hide .lt-block-less .p-animate.sidebar-wrapper:not(.hideAnimate)+.content-wrapper {
+    width: 85% !important;
+}
+
+.pshc-modal-window .rt-status-hover {
+    right: 20px;
+}
+
+.pshc-modal-window .modal-body {
+    padding: 18px;
+}
+
+.pshc-content .txt-color-5,
+.pshc-content .view-form .form-group address,
+.pshc-content .view-form .form-group p {
+    color: #000;
+}
+
+.pshc-content .custom-form .custom-panel-title {
+    color: #96292E;
+}
+
+.pshc-modal-window .form-control,
+.pshc-modal-window .chk-content,
+.pshc-modal-window .view-form .form-group p {
+    color: #000;
+}
+
+.pshc-modal-window .tr-chk-spliter li>span+.form-control,
+.tr-chk-spliter li>span+p {
+    color: #000;
+}
+
+.pshc-content .table-format tbody tr td,
+.pshc-modal-window .table-format tbody tr td {
+    color: #000;
+}
+
+.pshc-content .popover-content{		
+    height: 300px;		
+    overflow-y: scroll;		
+    overflow-x: hidden;		
+}		
+.phsc-content .popover-content .btn-fixed-inner {		
+    position: fixed;		
+}
+
+.pshc-modal-window .pshc-upload-content-holder {
+    width: 100%;
+    height: 100%;
+}
+
+.pshc-modal-window .pshc-documents,
+.pshc-modal-window .imageSelected,
+.pshc-modal-window .preview,
+.pshc-modal-window .preview-file {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+.pshc-modal-window .s-area .preview-file {
+    float: none;
+    width: auto;
+    height: auto;
+}
+
+.pshc-modal-window .imageSelected img {
+    height: auto;
+    width: auto;
+}
+
+.pshc-modal-window div.checkbox.custom.disabled-checkbox input[type="checkbox"]+span.rc-label:before {
+    background: #ddd !important;
+    width: 15px;
+    height: 15px;
+}
+
+.pshc-modal-window .fi-images-list {
+    float: left;
+}
+
+.pshc-modal-window .fi-image-holder {
+    margin: 0 110px;
+    float: left;
+}
+
+.rt-show .lt-block,
+.rt-show .lt-block-less {
+    width: 75%;
+}
+
+.rt-hide .lt-block,
+.rt-hide .lt-block-less {
+    width: 90%;
+}
+
+.pshc-modal-window .disable-field {
+    pointer-events: auto;
+    cursor: not-allowed;
+}
+.pshc-modal-window .disable-field select, .pshc-modal-window .disable-field button, .pshc-modal-window .disable-field input{
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+	a.disable-dashboard-locked-lead { 		
+    pointer-events: none;		
+    cursor: not-allowed;		
+    text-decoration: none !important; color:#000 !important		
+ }		
+ .disable-dashboard-locked-lead { 		
+    pointer-events: none;		
+    cursor: not-allowed;		
+    text-decoration: none !important; 		
+ }
+
+.disable-editaccess a { text-decoration: none !important; color:#000 !important}
+.pshc-modal-window .disable-field a.chk-innner-txt, .pshc-modal-window .disable-field label { pointer-events:none; }
+
+.pshc-modal-window .dir-checkbox input[type="checkbox"]:focus+span.rc-label:before {
+    background: #ff0000;
+}
+
+.pshc-modal-window div.checkbox.custom input[type="checkbox"]:focus+span.rc-label:before {
+    border: 1px solid #0081B8;
+}
+
+.pshc-modal-window .fi-images-list .fiImage {
+    float: left;
+    margin: 0 2px;
+}
+
+.pshc-modal-window div.checkbox.custom input[type="checkbox"]+span.rc-label:before,
+.pshc-modal-window div.checkbox.custom input[type="checkbox"]:checked+span.rc-label:before,
+.pshc-modal-window .dir-checkbox input[type="checkbox"]+span.rc-label:before,
+.pshc-modal-window .dir-checkbox input[type="checkbox"]:checked+span.rc-label:before {
+    width: 18px;
+    height: 18px;
+}
+
+.pshc-content .tooltip.top.fade.in {
+    position: absolute !important;
+    min-width: 23% !important;
+    background: #000 !important;
+    width: auto !important;
+    text-align: center !important;
+}
+
+.pshc-content .tooltip .tooltip-inner {
+    text-align: center !important;
+}
+
+.pshc-content .tooltip.top .tooltip-arrow {
+    bottom: -5px !important;
+}
+
+.pshc-content .pr-left.pr-left-full {
+    width: 790px;
+    border-right: none;
+}
+
+.sortasc {
+    float: right;
+    margin-left: -8px;
+    margin-top: 3px;
+    color: #D9DBDC;
+}
+
+.sortdesc {
+    float: right;
+    margin-right: 0px;
+    margin-top: 4px;
+    color: #D9DBDC;
+}
+.disable-editaccess { pointer-events: none;
+    cursor: not-allowed;
+}
+.v-accordion-scroll.full-width{
+    max-height: 100%;
+}
+.width-seventy-five { width: 75%;}
+
+
+.ci-modal-window .modal-lg {
+    width: 95%;
+}
+
+.ci-modal-window .modal-lg .rt-block {
+    width: 300px;
+}
+
+.ci-modal-window .lt-block {
+    width: 100%
+}
+.ci-modal-window .lt-block .content-wrapper {
+    width: 75%
+}
+
+.ci-modal {height:539px;}
+
+.party-image-container {
+    min-height: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    padding: 10px;
+}
+
+td.txt-ellipse {		
+    max-width: 150px;		
+    overflow: hidden;		
+    text-overflow: ellipsis;		
+    white-space: nowrap;		
+}

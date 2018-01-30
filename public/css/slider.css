@@ -1,0 +1,91 @@
+/*! 
+ * Slider Component Style
+ * Created at 		: dec-29;
+ * Start version	: 0.1;
+
+ * Current version	: 0.1;
+ * Last modified 	: dec-29;
+ * Last modified by  : 473625;
+ */
+
+
+slider{
+	display:     block;
+	position:    relative;
+	height:      30px;
+	width:       450px;
+}
+slider span.bar {
+	height:     24%;
+	z-index:    0;
+	background: #eee;
+	left:       0;
+	top:        25%;
+	cursor:     pointer;
+}
+slider span.bar.selection, slider span.bar.unselected {
+}
+slider span.bar.selection {
+	background: #0a0;
+	opacity:    0.5;
+}
+slider span.bar.unselected {
+	width:      auto;
+	background: #a00;
+	opacity:    0.5;
+}
+slider span.pointer {
+	cursor:           pointer;
+	width:            20px;
+	height:			  20px;
+	border-radius:	  50%;
+	top:              0;
+	bottom:           0;
+	background-color: #0081b8;
+}
+slider span.bar.unselected.low {
+    width:      auto;
+    background: #a00;
+    opacity:    0.5;
+}
+
+slider span.bar.unselected.high {
+    width:      auto;
+    background: black;
+    opacity:    0.5;
+}
+slider span.pointer:hover {
+}
+slider span.pointer.active {
+}
+slider span.bubble {
+	font-size:   0.7em;
+	line-height: 1.4em;
+	font-family: sans-serif;
+	text-align:  center;
+	text-shadow: none;
+	top:         -1.3em;
+	cursor:      pointer;
+}
+slider span.bubble.selection, slider span.bubble.limit {
+	top: 25%;
+}
+slider span.bubble.selection {
+}
+slider span.bubble.limit {
+}
+slider span.bubble.low, slider span.bubble.high {
+	display: none !important;
+}
+
+::-ms-tooltip {
+	display: none;
+}
+#slider-container {
+	-webkit-touch-callout: none;
+	-webkit-user-select:   none;
+	-khtml-user-select:    none;
+	-moz-user-select:      -moz-none;
+	-ms-user-select:       none;
+	user-select:           none;
+}

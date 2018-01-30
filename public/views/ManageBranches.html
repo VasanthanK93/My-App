@@ -1,0 +1,80 @@
+<div class="container">
+<div class="row page-top-title margin-b-1">
+        <header>
+            <h4>Bank Mapping For A Branch</h4>
+        </header>
+    </div>
+
+    <div class="row">
+
+        <section class="panel">
+
+            <div class="panel-body">
+
+                <div class="row">
+                    <div class="col-xs-12 form-inline blue">
+                        <form name="searchform" data-ng-submit="">
+                            Search a Branch by
+                            <div class="form-group has-feedback">
+                            <label class="control-label sr-only" for="inputSuccess2">Search</label>
+                           <input class="form-control um-margin-search-box-width" type="text" placeholder="Branch Name/Branch Id" data-ng-model="searchString"  >
+                           <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                           <!--button type="button" ng-Click="findValue(searchString)">Search</button-->
+                            <!-- <input class="form-control um-margin-search-box-width" type="text" placeholder="Branch Name/Branch Id" data-ng-model="q" id="search" class="form-control" placeholder="Filter text" >-->
+                            <!--<span class="glyphicon glyphicon-search form-control-feedback"></span-->
+                       </div>
+                        </form>
+                    </div>
+                </div>
+                <hr />
+
+                <div class="row form-group">
+                    <div class="col-xs-6 big-15">
+                       <span class="blue">List of Branch : </span><span class="corporate-color-1">{{(Branch.data.length)}}</span>
+                    </div>
+                </div>
+                  
+                <table class="table table-bordered table-format cm-table" data-ng-init="ascend=false" static-header>
+                    <colgroup>
+                        <col width="25" span="1">
+                        <col width="15" span="1">
+                        <col width="17" span="1">
+                        <col width="15" span="1">
+                        <col width="28" span="1">
+                    </colgroup>
+                   
+                    <thead>
+                        <tr>
+                            <th width="40%" data-ng-click="ascend=!ascend" class="pointer">Branch Name 
+                                <span >
+                                        <span class="pull-right margin-b-1"  data-ng-show="ascend " style="margin-left: -12px;">&#9650</span>
+                                        <span class="pull-right margin-t-2"  data-ng-show="!ascend ">&#9660</span>
+                                </span>
+                            </th>
+                            <th width="15%">Branch ID</th>
+                            <th width="40%">leapFunction Mapped</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                <tr data-ng-repeat="X in Branch.data|filter:searchString|filter:paginate">
+                            <td><u><a href="javascript:void(0)" data-ng-click="editProfile(Branch)">{{X.branchDesc}}</td>
+                            <td>{{X.branchID}}</td>
+                            <td>
+                            <span data-ng-repeat="X1 in X.bankDetails" >
+                                {{X1.leapFunction}}:{{X1.paymentMode}}
+                            </span></td>
+                        </tr>
+                    
+                    </tbody>
+                    </table>
+                 
+                    
+                    <div data-ng-show="notFound" class="row form-group has-errodr">
+                    <div class="col-xws-4  text-center help-block big-15"> No records found!</div>
+
+                </div>
+	     		</div>
+	     	</section>
+	     </div>
+	     
+	</div>

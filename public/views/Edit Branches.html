@@ -1,0 +1,569 @@
+<div class="container">
+    <div class="row page-top-title margin-b-1">
+        <header>
+            <h4 data-ng-show="reportee.isNewProfile">Create User Profile</h4>
+            <h4 data-ng-show="!reportee.isNewProfile">Manage User Profile</h4>
+        </header>
+    </div>
+    <div class="row">
+        <section class="panel form-readonly custom-form um-user-profile">
+            <form name="createUserform">
+                <div class="panel-body">
+                    <h4 class="custom-panel-title big-15">
+                        User Information <small
+                            class="pull-right blue"><i class="star-require">*</i>
+                            Mandatory Fields</small>
+                    </h4>
+                    <div class="row">
+                        <div class="col-xs-10">
+                            <div class="row">
+                                <div class="col-xs-3" data-ng-init="hasValidName =reportee.userName && reportee.userName !=''">
+                                    <div class="form-group">
+                                        <label for="role">User Name<i class="star-require">*</i>  <span class="glyphicon glyphicon-edit" data-ng-click="hasValidName=false"></span></label>
+                                        <span data-ng-if="hasValidName">
+                                            {{reportee.userName}}
+                                        </span>
+                                        <div class="form-group" data-ng-if="!hasValidName">
+                                            <input type="text" class="form-control" data-ng-model="reportee.userName" ch-validator="" placeholder="Enter User Name" ch-pattern="^[ 0-9A-Za-z]+$" is-required="true">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="form-group">
+                                        <label for="role">User ID</label> <span class="pull-left">{{reportee.userID}}</span>
+                                        <div class="custom checkbox margin-l-1 pull-left" data-ng-show="!reportee.isNewProfile">
+                                            <label class="pull-left">
+                                                <input type="checkbox" data-ng-checked="reportee.activeUMStatus==='I'" data-ng-model="activeUMStatus" data-ng-click="changeStatus()" />
+                                                <span class="rc-label valign-top">Disable</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="form-group">
+                                        <label for="role">User Email ID<i class="star-require">*</i></label>
+                                        <input type="text" class="form-control" data-ng-model="reportee.emailID" ch-validator="validateEmail(reportee.emailID)" placeholder="Enter User Email" is-required="true" maxlength="50" />
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="form-group">
+                                        <label for="role">Primary Role<i class="star-require">*</i> </label>
+                                        <select name='hierarchyinput' class="form-control" data-ng-options="role.hierarchyID as role.hierarchyName group by role.hierarchyDepartment for role in hierarchyList | orderBy:'hierarchyName'" data-ng-model="reportee.primaryHierarchyID" ch-validator='' is-required='true' data-ng-change="onHierarchyChange()">
+                                            <option value="">Select Role Hierarchy</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <div class="form-group">
+                                        <label for="role">User Type</label> <span>{{reportee.userType}}</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="form-group">
+                                        <label for="role">Mobile No<i class="star-require">*</i></label>
+                                        <input name="mobileno" class="form-control" type="text" placeholder="Enter Mobile No" data-ng-model="reportee.mobileNo" maxlength="10" ch-validator='validateMobileNo(reportee.mobileNo)' ch-pattern="^[0-9]+$" is-required='true'>
+                                    </div>
+                                </div>
+                                <!-- data-ng-disabled="!reportee.isNewProfile || isAdmin" -->
+                                <div class="col-xs-3">
+                                    <div class="form-group">
+                                        <label for="role">Tablet Unique Serial No<i class="star-require">*</i></label>
+                                        <input name="tabinput" class="form-control" type="text" data-ng-model="reportee.tabletSerialNumber" maxlength="30" data-ch-validator="" ch-pattern="^[a-zA-Z0-9]+$" placeholder="Enter Tablet Unique Serial No" is-required='true'>
+                                        <div class="has-error" ng-show="tabletSerialNumberNotValid">
+                                            <!-- <span ng-show="" class="v-message-content help-block">This field is required!</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-xs-3">
+                        <div class="form-group">
+                            <label for="role">Maximum Allocation</label>
+                            <input class="form-control" type="text" placeholder="">
+                         </div>
+                    </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul class="list-unstyled list-inline additional-supervisor">
+                                <li class="col-xs-2">
+                                    <div class="form-group">
+                                        <label for="role">Reporting Manager</label> <span>{{reportee.accessDetails[getObjectIndex(reportee.accessDetails,'isReportingManager',true)].supervisorName+'('+reportee.accessDetails[getObjectIndex(reportee.accessDetails,'isReportingManager',true)].supervisorID+')'}}</span>
+                                        <u><a href="javascript:void(0)"
+                                            data-ng-click="addSupervisor(getObjectIndex(reportee.accessDetails,'isReportingManager',true), true)">Change</a></u>
+                                    </div>
+                                </li>
+                                <li class="col-xs-8">
+                                    <div class="form-group">
+                                        <label for="role">Additional Supervisor
+                                            <span class="margin-l-1"><a data-ng-click="addSupervisor()" class="pointer"><u>Add Supervisor</u></a></span>
+                                        </label>
+                                        <!-- <button type="button" class="btn btn-grey margin-t-2"
+                                            data-ng-click="addSupervisor()">
+                                            <i class="glyphicon glyphicon-plus"></i> Additional
+                                            Supervisor
+                                        </button> -->
+                                        <div class="file-upload-1" data-ng-show="items.isReportingManager===false" data-ng-repeat="items in reportee.accessDetails">
+                                            <span class="ng-binding">{{items.supervisorName+'('+items.supervisorID+')'}}</span>
+                                            <aside class="glyphicon glyphicon-remove text-danger big-13" data-ng-click="removeSupervisor($index)"></aside>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--  <li data-ng-repeat="items in reportee.accessDetails">
+                                    <div class="form-group well well-sm"
+                                        data-ng-show="items.isReportingManager===false">
+                                        <label for="role">Additional Supervisor <span
+                                            data-ng-click="removeSupervisor($index)"
+                                            class="glyphicon glyphicon-remove pull-right"></span>
+                                        </label> <span>{{items.supervisorName}}</span> <u><a
+                                            href="javascript:void(0)"
+                                            data-ng-click="addSupervisor($index)">Change</a></u>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hr">
+                        <hr />
+                    </div>
+                    <div data-ng-show="showAccessDetails">
+                        <h4 class="custom-panel-title big-15">
+                                Product Availability & Role Access 
+                            </h4>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="well well-sm well-custom margin-b-2">
+                                    <div>
+                                        <div class="blue margin-b-3">
+                                            Functions
+                                            <!-- <a href="#" class="pull-right"><u>Select
+                                                        All</u></a> -->
+                                        </div>
+                                    </div>
+                                    <div class="new-location-scroll">
+                                        <hr class="hr">
+                                        <ul class="list-unstyled list-um-zone" data-ng-if="productList.length > 0">
+                                            <li data-ng-repeat="product in productList" data-ng-show="product.productGroup != 'ADMINISTRATION'" data-ng-init="product.isSelected=(reportee.accessDetails[supervisorIndex].leapFunctions.indexOf(product.leapFunction) > -1)">
+                                                <div class="custom checkbox">
+                                                    <label>
+                                                        <input type="checkbox" data-ng-checked="(reportee.accessDetails[supervisorIndex].leapFunctions.indexOf(product.leapFunction) > -1)" data-ng-click="addOrRemoveItem('leapFunctions',product.leapFunction)" data-ng-model="product.isSelected">
+                                                        <span class="rc-label">{{product.leapFunction}}</span>
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 margin-l-1" data-ng-show="reportee.accessDetails[supervisorIndex].leapFunctions && reportee.accessDetails[supervisorIndex].leapFunctions.length>0">
+                                <div class="well well-sm well-custom margin-b-2">
+                                    <div>
+                                        <div class="col-xs-8 pull-right um-margin-t-4">
+                                            <label for="inputSuccess2">
+                                                <input class="form-control  um-pad-r-20" type="text" placeholder="Search Roles" data-ng-model="searchRole" data-ch-validator="" ch-pattern="^[a-zA-Z/_/-]+$" maxlength="10">
+                                                <span data-ng-click="" class="glyphicon glyphicon-search form-control-feedback margin-r-2 um-margin-t-22">
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="blue margin-b-3">Role Access</div>
+                                    </div>
+                                    <hr class="hr">
+                                    <div class="new-location-scroll">
+                                        <ul class="list-unstyled list-um-zone" data-ng-if=" roleList.length > 0">
+                                            <li data-ng-repeat="role in roleList|orderBy : 'isSelected':true|filter:{'roleName':searchRole}">
+                                                <div class="custom checkbox">
+                                                    <label>
+                                                        <input type="checkbox" data-ng-init="role.isSelected=( getObjectIndex(reportee.accessDetails[supervisorIndex].roles , 'roleID', role.roleID )>-1)" data-ng-checked="role.isSelected" data-ng-model="role.isSelected" data-ng-change="addOrRemoveROLACT('roles',role.roleID,'roleID','core')">
+                                                        <span class="rc-label">{{role.roleName}} <u><a class="margin-l-1" href=""
+                                                                data-ng-click="openActivities(false,false,role)">({{role.activityIDs.length}})</a></u></span>
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+                    <h4 class="custom-panel-title big-15">
+                        Work Location Address 
+                    </h4>
+                    <div class="row">
+                        <div class="col-xs-3 form-group">
+                            <label>Door No<i data-ng-if="data.isCFEUser" class="star-require">*</i></label>
+                            <input type="text" data-ch-validator="validateAdressFields(reportee.workLocationAddress.doorNo,'Door No')" ch-pattern="^[a-zA-Z0-9 ///-]+$" maxlength="15" is-required="data.isCFEUser" placeholder="Enter Door No" class="form-control" data-ng-change="reportee.workLocationAddress.latLong=[]" data-ng-model="reportee.workLocationAddress.doorNo" / maxlength="10">
+                        </div>
+                        <div class="col-xs-3">
+                            <label>Street Area Landmark<i data-ng-if="data.isCFEUser" class="star-require">*</i></label>
+                            <input type="text" ch-validator="validateAdressFields(reportee.workLocationAddress.streetAreaLandmark, 'Street Area Landmark')" ch-pattern="^[ a-zA-Z0-9/,]+$" maxlength="100" is-required="data.isCFEUser" class="form-control" placeholder="Enter Street Address" data-ng-change="reportee.workLocationAddress.latLong=[]" data-ng-model="reportee.workLocationAddress.streetAreaLandmark" maxlength="50" />
+                        </div>
+                        <div class="col-xs-2">
+                            <label>City<i data-ng-if="data.isCFEUser" class="star-require">*</i></label>
+                            <ch-typeahead name="city-name" ng-model="reportee.workLocationAddress.cityID" get-item-list="getCityList" display-model="reportee.workLocationAddress.cityName" data-ng-change="reportee.workLocationAddress.latLong=[]" placeholder="Enter City Name" valuekey="cityID" mandatory="data.isCFEUser" textkey="cityName"></ch-typeahead>
+                        </div>
+                        <div class="col-xs-2">
+                            <label>State<i data-ng-if="data.isCFEUser" class="star-require">*</i></label>
+                            <ch-typeahead name="state-name" ng-model="reportee.workLocationAddress.stateID" get-item-list="getStateList" display-model="reportee.workLocationAddress.stateName" data-ng-change="reportee.workLocationAddress.latLong=[]" placeholder="Enter State Name" valuekey="stateID" mandatory="data.isCFEUser" textkey="stateDesc"></ch-typeahead>
+                        </div>
+                        <div class="col-xs-2">
+                            <label>Pincode<i data-ng-if="data.isCFEUser" class="star-require">*</i></label>
+                            <input type="text" data-ch-validator="validateAdressFields(reportee.workLocationAddress.pincode,'pincode')" ch-pattern="^[0-9]+$" maxlength="6" is-required="data.isCFEUser" data-ng-change="reportee.workLocationAddress.latLong=[]" placeholder="Enter Pincode" class="form-control" data-ng-model="reportee.workLocationAddress.pincode" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- <form name="latlongForm"> -->
+                            <div class="col-xs-3 form-group">
+                                <label>Latitude<i data-ng-if="data.isCFEUser" class="star-require">*</i></label>
+                                <input type="text" placeholder="Latitude" class="form-control"  maxlength="50" ch-validator="" is-required="data.isCFEUser" disabled data-ng-model="reportee.workLocationAddress.latLong[0]"/>
+                            </div>
+                            <div class="col-xs-3">
+                                <label>Longitude<i data-ng-if="data.isCFEUser" class="star-require">*</i></label>
+                                <input type="text" class="form-control" placeholder="Longitude" maxlength="50" ch-validator="" is-required="data.isCFEUser" data-ng-model="reportee.workLocationAddress.latLong[1]" disabled />
+                            </div>
+                            <div class="margin-t-1 col-xs-2">
+                                <!-- <form-submit on-submit="getCoordinates()" class="" label="'Get LatLong'">Save</form-submit> -->
+                                <button type="button" class="btn btn-info" data-ng-click="getCoordinates()">Get LatLong</button>
+                            </div>
+                        <!-- </form> -->
+                    </div>
+                    <div class="hr">
+                        <hr />
+                    </div>
+                    <div data-ng-if="showAccessDetails">
+                        <div class="row">
+                            <div class="col-xs-9">
+                                <h4 class="custom-panel-title big-15">
+                                Location Access
+                            </h4>
+                                <div class="cusdtom-nav-tabs um-nav-tabs">
+                                    <div class="col-xs-6 form-inline pad-l-1" data-ng-init="zone=userLocation[0]">
+                                        <span class="blue">Select Zone</span>
+                                        <select class="form-control" data-ng-options="test.name for test in userLocation" data-ng-model="zone">
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-12 pad-l-1" data-ng-show="zone">
+                                        <div class="row">
+                                            <div class="col-xs-5 form-group margin-t-1">
+                                                <div class="custom checkbox">
+                                                    <label>
+                                                        <input type="checkbox" data-ng-change="regionSelected(zone,zone)" data-ng-init="region.isSelected=false" data-ng-model="zone.isSelectedAll">
+                                                        <span class="rc-label">Select All Regions, Areas and Branches.</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-4 pad-r-1">
+                                                <div class="well well-sm well-custom pad-r-1 margin-b-2">
+                                                    <div>
+                                                        <div class="blue margin-b-3">Regions
+                                                            <div class="col-xs-8 pull-right um-margin-t-4">
+                                                                <label for="inputSuccess2">
+                                                                    <input class="form-control  um-pad-r-20" type="text" placeholder="Search Regions" data-ng-model="searchRegion" data-ch-validator="" ch-pattern="^[a-zA-Z0-9]+$" maxlength="10">
+                                                                    <span data-ng-click="" class="glyphicon glyphicon-search form-control-feedback margin-r-2 um-margin-t-22">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="hr">
+                                                    </div>
+                                                    <div class="new-location-scroll">
+                                                        <ul class="list-unstyled list-um-zone">
+                                                            <li data-ng-repeat="region in zone.items | filter:{'name':searchRegion}">
+                                                                <div class="custom checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" data-ng-change="regionSelected(region,zone,region)" data-ng-model="region.isSelected">
+                                                                        <span class="rc-label">{{region.name}}</span>
+                                                                    </label>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4 pad-r-1 ">
+                                                <div class="well well-sm well-custom pad-r-1 margin-b-2">
+                                                    <div>
+                                                        <div class="blue margin-b-3">Areas
+                                                            <div class="col-xs-8 pull-right um-margin-t-4">
+                                                                <label for="inputSuccess2">
+                                                                    <input class="form-control  um-pad-r-20" type="text" placeholder="Search Areas" data-ng-model="searchArea" data-ch-validator="" ch-pattern="^[a-zA-Z0-9]+$" maxlength="10">
+                                                                    <span data-ng-click="" class="glyphicon glyphicon-search form-control-feedback margin-r-2 um-margin-t-22">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="hr">
+                                                    </div>
+                                                    <div class="new-location-scroll">
+                                                        <ul class="list-unstyled list-um-zone" data-ng-repeat="region in zone.items" data-ng-show="filteredAreas.length>0">
+                                                            <li>
+                                                                {{region.name}}
+                                                                <ul class="list-unstyled margin-l-1">
+                                                                    <li data-ng-repeat="area in filteredAreas = (region.items|filter:{'name':searchArea})">
+                                                                        <div class="custom checkbox">
+                                                                            <label>
+                                                                                <input type="checkbox" data-ng-change="regionSelected(area,zone,region,area)" data-ng-model="area.isSelected">
+                                                                                <span class="rc-label" data-ng-click="selectArea(selectedRegion,area)">{{area.name}}</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4 pad-r-1">
+                                                <div class=" well well-sm well-custom pad-r-1 margin-b-2">
+                                                    <div>
+                                                        <div class="blue margin-b-3">Branches
+                                                            <div class="col-xs-8 pull-right um-margin-t-4">
+                                                                <label for="inputSuccess2">
+                                                                    <input class="form-control  um-pad-r-20" type="text" placeholder="Search Branches" data-ng-model="searchBranch" data-ch-validator="" ch-pattern="^[a-zA-Z0-9]+$" maxlength="10">
+                                                                    <span data-ng-click="" class="glyphicon glyphicon-search form-control-feedback margin-r-2 um-margin-t-22">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="hr">
+                                                    </div>
+                                                    <div class="new-location-scroll">
+                                                        <div data-ng-repeat="region in zone.items">
+                                                            <ul class="list-unstyled list-um-zone" data-ng-repeat="area in region.items " data-ng-show="filteredBranches.length">
+                                                                <li>
+                                                                    {{area.name}}
+                                                                    <ul class="list-unstyled margin-l-1">
+                                                                        <li data-ng-repeat="branch in filteredBranches = (area.items |filter:{'branchDesc':searchBranch})">
+                                                                            <div class="custom checkbox">
+                                                                                <label>
+                                                                                    <input type="checkbox" data-ng-change="regionSelected(branch,zone,region,area,branch)" data-ng-model="branch.isSelected">
+                                                                                    <span class="rc-label">{{branch.branchDesc}}</span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- </tab>
+                        </tabset> -->
+                                    <div class="col-xs-4 left-line">
+                                        <!-- Tree structure -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="col-xs-3 marfgin-t-3 left-line">
+                                    <div class="">
+                                        <span>Selection Summary</span>
+                                    </div>
+                                    <div ui-tree class="margin-t-2 scroll-350">
+                                        <ol ui-tree-nodes="" data-nodrag ng-model="reporteeLocation" ng-class="{hidden: collapsed}">
+                                            <li ng-repeat="zone in reporteeLocation" ui-tree-node>
+                                                <div ui-tree-handle>
+                                                    <a class=" btn-xs" ng-click="toggle(this)"><span class="glyphicon" ng-class="{'glyphicon-plus': collapsed, 'glyphicon-minus': !collapsed}"></span></a>
+                                                    <span class="margin-l-1">{{zone.name}}</span>
+                                                </div>
+                                                <ol ui-tree-nodes="" ng-model="zone.items" ng-class="{hidden: collapsed}">
+                                                    <li ng-repeat="region in zone.items" ui-tree-node>
+                                                        <div ui-tree-handle>
+                                                            <a class=" " ng-click="toggle(this)"><span class="glyphicon" ng-class="{'glyphicon-plus': collapsed, 'glyphicon-minus': !collapsed}"></a>
+                                                            <span class="margin-l-1">{{region.name}}</span>
+                                                        </div>
+                                                        <ol ui-tree-nodes="" ng-model="region.items" ng-class="{hidden: collapsed}">
+                                                            <li ng-repeat="area in region.items" ui-tree-node>
+                                                                <div ui-tree-handle>
+                                                                    <a class=" " ng-click="toggle(this)"><span class="glyphicon" ng-class="{'glyphicon-plus': collapsed, 'glyphicon-minus': !collapsed}"></a>
+                                                                    <span class="margin-l-1">{{area.name}}</span>
+                                                                </div>
+                                                                <ol ui-tree-nodes="" ng-model="area.items" ng-class="{hidden: collapsed}">
+                                                                    <li ng-repeat="branch in area.items" ui-tree-node>
+                                                                        <div ui-tree-handle>
+                                                                            <span class="margin-l-1">{{branch.branchDesc}}</span>
+                                                                        </div>
+                                                                    </li>
+                                                                </ol>
+                                                            </li>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ******location tab view -->
+                        <hr />
+                    </div>
+                    <div data-ng-if="data.isCFEUser">
+                    <div class="row" >
+                        <div class="col-xs-12">
+                            <h4 class="custom-panel-title big-15">
+                                CFE Mapping
+                            </h4>
+                        </div>
+                        <div class="">
+                            <div class="col-xs-2">
+                                <div class="form-group">
+                                    <label for="role">
+                                        CFE Color
+                                        <i data-ng-if="data.isCFEUser" class="star-require">*</i>
+                                    </label>
+                                    <mark class="cfe-red cfe-box valign-top" data-ng-init="cfeRed=(reportee.colorCodes.indexOf(colorCodes[0])>-1)" data-ng-click="addColorCodes(cfeRed,colorCodes[0],cfeRed=!cfeRed)">
+                                        <i data-ng-show="cfeRed" class="glyphicon glyphicon-ok "></i>
+                                    </mark>
+                                    <mark class="cfe-orange cfe-box valign-top" data-ng-init="cfeOrange=(reportee.colorCodes.indexOf(colorCodes[1])>-1)" data-ng-click="addColorCodes(cfeOrange,colorCodes[1],cfeOrange=!cfeOrange)">
+                                        <i data-ng-show="cfeOrange" class="glyphicon glyphicon-ok"></i>
+                                    </mark>
+                                    <mark class="cfe-green cfe-box valign-top" data-ng-init="cfeGreen=(reportee.colorCodes.indexOf(colorCodes[2])>-1)" data-ng-click="addColorCodes(cfeGreen,colorCodes[2],cfeGreen=!cfeGreen)">
+                                        <i data-ng-show="cfeGreen" class="glyphicon glyphicon-ok"></i>
+                                    </mark>
+                                </div>
+                            </div>
+                            <div class="col-xs-2">
+                                <div class="form-group">
+                                    <label for="role">
+                                        Min. Capacity of CFE
+                                        <i data-ng-if="data.isCFEUser" class="star-require">*</i>
+                                    </label> 
+                                    <span>
+                                        <input class="form-control" data-ch-validator="" ch-pattern="^[0-9]+$" maxlength="3" placeholder="Enter Min.Capacity" is-required="true" data-ng-model="reportee.minAllocation"/>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-xs-2">
+                                <div class="form-group">
+                                    <label for="role">
+                                        Max. Capacity of CFE
+                                        <i data-ng-if="data.isCFEUser" class="star-require">*</i>
+                                    </label> 
+                                    <span>
+                                        <input class="form-control" data-ch-validator="" ch-pattern="^[0-9]+$" maxlength="3" placeholder="Enter Max.Capacity" is-required="true" data-ng-model="reportee.maxAllocation"/>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-xs-2">
+                                <div class="form-group" data-ng-init="priorities=[1,2,3,4,5]">
+                                    <label for="role">
+                                        Priority
+                                        <i data-ng-if="data.isCFEUser" class="star-require">*</i>
+                                    </label> 
+                                    <span>
+                                        <select data-ng-model="reportee.priority"
+                                        class="form-control" ch-validator="" is-required="true">
+                                            <option value="">Select Priority</option>
+                                            <option data-ng-repeat="priority in priorities">{{priority}}</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-xs-2">
+                                <div class="form-group">
+                                    <label for="role">
+                                        Max. No of Receipts
+                                        <i data-ng-if="data.isCFEUser" class="star-require">*</i>
+                                    </label> 
+                                    <span>
+                                        <input class="form-control" data-ch-validator="" ch-pattern="^[0-9]+$" maxlength="3" placeholder="Enter Max.Receipts" is-required="true" data-ng-model="reportee.maxReceipts"/>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-xs-2">
+                                <div class="form-group">
+                                    <label for="role">
+                                        Max. Receipt Amount
+                                        <i data-ng-if="data.isCFEUser" class="star-require">*</i>
+                                    </label> 
+                                    <span>
+                                        <input class="form-control" data-ch-validator="" ch-pattern="^[0-9]+$" maxlength="10" placeholder="Enter Max.Receipt Amount" is-required="true" data-ng-model="reportee.maxReceiptAmount"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    </div>
+                    <!-- <div class="hide">
+                        <h4 class="custom-panel-title big-15">
+                            Adhoc Activity Access <i class="star-require">*</i>
+                        </h4>
+                        <table class="table table-bordered table-format margin-b-2">
+                            <thead>
+                                <tr>
+                                    <th width="38%">Activity</th>
+                                    <th width="62%">Access Type</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="location-scroll">
+                            <table class="table table-bordered table-format">
+                                <colgroup>
+                                    <col span="1" style="width: 38.3%">
+                                    <col span="1" style="width: 61%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <ul class="list-unstyled list-um-zone">
+                                                <li data-ng-repeat="activity in adhocActivitiesList">
+                                                    {{activity.activityID}}</li>
+                                                
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-xs-2">
+                                                    <ul class="list-unstyled list-um-zone">
+                                                        <li data-ng-repeat="activity in adhocActivitiesList">
+                                                            <input type="checkbox"
+                                                            data-ng-disabled="(uiUserMapping.adhocActivitiesObj[getObjectIndex(uiUserMapping.adhocActivitiesObj,'activityID',activity.activityID)].accessType!=='reassign' && uiUserMapping.adhocActivitiesObj[getObjectIndex(uiUserMapping.adhocActivitiesObj,'activityID',activity.activityID)].accessType!=='both') &&!isAdmin"
+                                                            data-ng-checked="uiReporteeMapping.adhocActivitiesObj[getObjectIndex(uiReporteeMapping.adhocActivitiesObj,'activityID',activity.activityID)].accessType==='core' || uiReporteeMapping.adhocActivitiesObj[getObjectIndex(uiReporteeMapping.adhocActivitiesObj,'activityID',activity.activityID)].accessType==='both'"
+                                                            data-ng-change="addOrRemoveROLACT('adhocActivities',activity.activityID,'activityID','core')"
+                                                            data-ng-model="activity.accessType"> Core
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <ul class="list-unstyled list-um-zone">
+                                                        <li data-ng-repeat="activity in adhocActivitiesList">
+                                                            <input type="checkbox"
+                                                            data-ng-disabled="(uiUserMapping.adhocActivitiesObj[getObjectIndex(uiUserMapping.adhocActivitiesObj,'activityID',activity.activityID)].accessType!=='reassign' && uiUserMapping.adhocActivitiesObj[getObjectIndex(uiUserMapping.adhocActivitiesObj,'activityID',activity.activityID)].accessType!=='both') && !isAdmin"
+                                                            data-ng-checked="uiReporteeMapping.adhocActivitiesObj[getObjectIndex(uiReporteeMapping.adhocActivitiesObj,'activityID',activity.activityID)].accessType==='reassign' || uiReporteeMapping.adhocActivitiesObj[getObjectIndex(uiReporteeMapping.adhocActivitiesObj,'activityID',activity.activityID)].accessType==='both'"
+                                                            data-ng-change="addOrRemoveROLACT('adhocActivities',activity.activityID,'activityID','reassign')"
+                                                            data-ng-model="activity.isSelected"> Reassign
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br>
+                    </div> -->
+                    <div class="">
+                    	<span data-ng-if="!reviewUser"><form-submit on-submit="save()" class="" label="'Save'">Save</form-submit></span>
+                    	<span data-ng-if="reviewUser"><form-submit on-submit="save()" class="" label="'Review'">Review</form-submit></span>                     	                        
+                        <button type="button" class="btn btn-info" data-ng-click="navigateFromProfile()">Cancel</button>
+                        <a target="javascript:void(0)" data-ng-if="data.isSFEUser && !reportee.isNewProfile"  class="btn btn-info pull-right" data-ng-href="{{redirectToMasters()}}">Click here for Dealer/Manufacture Mapping</a>
+                    </div>
+                </div>
+    </div>
+    </form>
+    </section>
+</div>
+</div>

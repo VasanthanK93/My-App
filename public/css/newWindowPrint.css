@@ -1,0 +1,112 @@
+
+ @media print {
+ 	@page {
+		margin: 0;
+	}
+			
+    .printDiv {
+        font-family:  Verdana, monospace;
+        font-stretch: condensed; 
+        color:#000; 
+        margin:0pt;    
+        font-size: 9px !important;
+        font-weight: lighter;       
+		height : auto;  
+    }
+    .printDiv table th, .printDiv table td {
+    	font-size: 9px !important;
+    	font-weight: 100 !important;
+    }
+	.printDiv .row {		
+	 	margin: 0;
+	 	padding: 0px !important; 
+	}
+	.printDiv .row:before,.printDiv .row:after {
+    	content: " ";
+    	display: table;
+	}	
+	.printDiv .row:after {
+    	clear: both;
+	}	
+   .printDiv .col-xs-12 {
+   		margin: 0;
+   		padding: 0px !important; 
+   }
+   .printDiv .blue .col-xs-6:first-child{    				   	  
+	    padding: 0px !important;
+	    float: left;  
+	    margin: 0px !important;
+	    width: 50% !important;
+	    position: relative;
+	    font-size: 9px !important;
+    }
+    .printDiv .blue .col-xs-6:last-child{    				   	  
+	    padding: 0px !important;
+	    float: right;  
+	    width: 47% !important;
+	    position: relative;
+	    font-size: 9px !important;
+    }
+    .printDiv .row .col-xs-5:first-child{
+    	 padding: 0px !important;  	    	
+    	 float: left;
+	     width: 38% !important;   
+	     position: relative;   
+	      
+    }
+    .printDiv .row .col-xs-1{     
+    	padding: 0px !important;  	
+    	display: inline-block;
+	    margin: 0 auto;
+	    width: 2px;  
+	    font-size: 9px !important;   
+    }
+    .printDiv .row .col-xs-5:last-child{         	   
+    	float: left;			   	   
+	    padding: 0px !important;
+	   	margin-left: 10px;
+	   	width: 45% !important;
+	   	position: relative;
+    }
+	.printDiv .row .col-xs-12{
+    	 padding: 0px !important;  	    	
+    	 float: left;
+	     font-size: 9px !important;
+	     width: 96% !important;       
+    }
+    .printDiv .row .col-xs-7{
+    	 padding: 0px !important;  	    	
+    	 float: left;
+	     font-size: 9px !important;
+	     width: 57% !important;       
+    }
+    .printDiv .row .col-xs-3{         	   
+    	float: right;			   	   
+	    padding: 0px !important;
+	   	position: absolute;
+	   	display: inline-block;
+	   	margin-left: 10px;
+	   	font-size: 9px !important;   
+	   	width: 36% !important;
+    }
+    .printDiv .receipt-text {
+    	font-size: 9px !important;
+    	font-weight: 600;
+    	border-top: 1px dotted #514E4E;
+    	border-bottom: 1px dotted #514E4E;
+    	white-space: nowrap;
+    	text-align: center;
+    }
+    
+    .printDiv strong {
+  		font-size: 9px !important;
+  		font-weight: 600;   
+  	}
+  	
+	.printDiv .row strong span {
+  		font-size: 9px !important;   
+  	}
+	.printDiv .row .agreement-font{
+  		font-size: 9px !important;
+  	}
+}

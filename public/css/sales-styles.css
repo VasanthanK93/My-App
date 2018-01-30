@@ -1,0 +1,3982 @@
+/*========================================================================*/
+
+
+/* _Select mode styles  */
+
+.mode-selector {
+	display: inline-block;
+	width: 150px;
+}
+
+
+/*========================================================================*/
+
+
+/*Upload Direcotry*/
+
+
+/*Enquirey Upload PP*/
+
+.partyPhotoStyle img {
+	width: 31px;
+	height: 31px;
+	float: left;
+	margin-right: 10px;
+}
+
+
+/*========================================================================*/
+
+
+/* _vehicle info image*/
+
+.image-container {
+	width: 135px;
+	min-height: 90px;
+	float: left;
+	margin-left: 15px;
+	margin-right: 15px;
+	position: relative;
+}
+
+.image-container .pink-notify-icon {
+	position: absolute;
+	top: 64px;
+	left: 2%;
+}
+
+.image-holder {
+	width: 135px;
+	height: 90px;
+	border-radius: 2px;
+}
+
+.image-holder+label {
+	color: #525f77;
+	font-weight: normal;
+	margin-top: 5px;
+}
+
+.sign-holder,
+.sign-holder img {
+	float: left;
+	width: 267px;
+	height: 120px;
+	border: 1px solid #ddd;
+}
+
+.sign-holder img {
+	border: none;
+}
+
+.sign-holder-btn {
+	position: absolute;
+	bottom: -1px;
+	margin-left: 2px;
+}
+
+
+/*========================================================================*/
+
+
+/* _vehicle information/etc heading */
+
+.info-title h3 {
+	margin-top: 0;
+	float: left;
+}
+
+.info-title .info-link {
+	padding: 5px 10px;
+	text-decoration: underline;
+	float: left;
+}
+
+.pink-notify-icon {
+	color: #ffffff;
+	background: #FD6B6B;
+	border-radius: 15px;
+	padding: 2px 6px;
+	float: left;
+}
+
+
+/*========================================================================*/
+
+
+/* _To show small block information ex: vehicle information*/
+
+.short-info-block {
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	float: left;
+	margin-right: 10px;
+	min-width: 150px;
+	padding: 10px 10px;
+}
+
+.short-info-block label {
+	color: #003f88;
+	font-weight: normal;
+	margin-left: 5px;
+	vertical-align: top;
+}
+
+.short-info-block .txt-indent {
+	margin-left: 33px;
+}
+
+
+/*========================================================================*/
+
+
+/* _Quick-view icon*/
+
+.qv-icon {
+	display: inline-block;
+	background: url(../images/qv_icon.png) no-repeat;
+	width: 20px;
+	height: 12px;
+	cursor: pointer;
+}
+
+
+/* _Green Check mark*/
+
+.green-tick,
+.green-tick-1 {
+	display: inline-block;
+	background: url(../images/green_tick.png) no-repeat;
+	width: 17px;
+	height: 17px;
+	margin-right: 5px;
+	background-size: 17px 17px;
+}
+
+
+/*Green-tick & Disabled Post-SHC*/
+
+.green-tick-1 {
+	background: url(../images/green_tick_mark_img.png) no-repeat;
+	background-size: 16px 16px;
+	width: 16px;
+	height: 16px;
+	margin-left: 2px;
+	cursor: pointer;
+}
+
+.tick-active {
+	display: inline-block;
+	background: url(../images/tick_active.png) no-repeat;
+	width: 25px;
+	height: 24px;
+	cursor: pointer;
+}
+
+.tick-disabled,
+.tick-disabled-1 {
+	display: inline-block;
+	background: url(../images/tick_disabled.png) no-repeat;
+	width: 25px;
+	height: 24px;
+	cursor: pointer;
+}
+
+.tick-disabled-1 {
+	background-size: 17px 16px;
+	width: 17px;
+	height: 17px;
+	margin: 0 0 0 2px;
+}
+
+
+/*_Red Tick mark with Disabled Icons*/
+
+.red-cross-mark,
+.red-cross-mark-1 {
+	display: inline-block;
+	background: url(../images/my_pdd_tick_not_ok_img.png) no-repeat;
+	width: 17px;
+	height: 17px;
+	cursor: pointer;
+}
+
+
+/*This is used in PSHC->tr->prior Vehicles : due to unavailability of cross mark, can remove anytime*/
+
+.red-cross-mark-1 {
+	width: 15px;
+	height: 15px;
+	background-size: 15px 15px;
+	vertical-align: middle;
+	margin: 0 0 0 2px;
+}
+
+.cross-mark-active {
+	display: inline-block;
+	background: url(../images/cancel_active.png) no-repeat;
+	width: 26px;
+	height: 25px;
+	cursor: pointer;
+}
+
+.cross-mark-disabled,
+.cross-mark-disabled-1 {
+	display: inline-block;
+	background: url(../images/cross_disabled.png) no-repeat;
+	width: 26px;
+	height: 25px;
+	cursor: pointer;
+}
+
+.cross-mark-disabled-1 {
+	width: 17px;
+	height: 17px;
+	background-size: 17px;
+	margin: 0 0 0 2px;
+}
+
+
+/* Question number indicator insurance*/
+
+.bulletin {
+	display: inline-block;
+	background: url(../images/bulletin_icon.png) no-repeat;
+	width: 19px;
+	height: 19px;
+	margin-right: 5px;
+}
+
+
+/* _Show Green alert Msg on ID proof*/
+
+.success-alert,
+.failure-alert {
+	vertical-align: middle;
+	margin-bottom: 0;
+	background-color: #e8f7fa;
+	border-color: #c7e8f3;
+	color: #0081b8;
+	padding: 12px 15px 6px 15px;
+}
+
+.success-alert span,
+.failure-alert span {
+	vertical-align: top;
+}
+
+.failure-alert {
+	background-color: #fae8e8;
+	border-color: #f3c7c7;
+	color: #a33539;
+}
+
+
+/*========================================================================*/
+
+.search-width {
+	min-width: 100px;
+}
+
+
+/*Used for setting datepicker width in Masters  */
+
+.datepicker-minwidth {
+	min-width: 150px;
+}
+
+
+/*========================================================================*/
+
+
+/*  #Sprint 2
+	#All style    */
+
+
+/*PSHC modal customized*/
+
+.pshc-modal {
+	max-height: 543px;
+	padding-right: 0;
+}
+
+.show-lead-id,
+.show-lead-id-1 {
+	background: #f8f9fb;
+	padding: 5px 0 0 0;
+	border-bottom: 1px solid #F4E7E7;
+	margin-bottom: 8px;
+	position: relative;
+	z-index: 1;
+}
+
+.show-lead-id {
+	height: 49px;
+}
+
+.show-hidden-ids {
+	max-height: 0;
+	overflow: hidden;
+	-webkit-transition: max-height 0.8s;
+	-moz-transition: max-height 0.8s;
+	transition: max-height 0.8s;
+}
+
+.show-lead-id-1:hover .show-hidden-ids {
+	max-height: 49px;
+}
+
+.show-lead-id-icon {
+	position: absolute;
+	bottom: -1px;
+	left: 75.3%;
+}
+
+
+/*To proivde some white space btw rt-block and lt-block at tabs area*/
+
+.block-space-provider,
+.block-space-provider-less {
+	/* width: 15px;*/
+	width: 21px;
+	height: 10px;
+	display: inline-block;
+	position: absolute;
+	background: #ffffff;
+	top: 100px;
+	right: 212px;
+}
+
+.block-space-provider-less {
+	right: 285px;
+}
+
+
+/*========================================================================*/
+
+
+/*right block*/
+
+.rt-block,
+.rt-block-less {
+	width: 212px;
+	height: 539px;
+	border-left: 1px solid #EAEAEA;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #ffffff;
+	-webkit-box-shadow: -23px 3px 68px -40px rgba(193, 208, 227, 1);
+	-moz-box-shadow: -23px 3px 68px -40px rgba(193, 208, 227, 1);
+	box-shadow: -23px 3px 68px -40px rgba(193, 208, 227, 1);
+	z-index: 2;
+}
+
+.rt-small {
+	width: 30px !important;
+}
+
+.rt-block-less {
+	width: 289px;
+}
+
+.rt-content {
+	height: 430px;
+	overflow: auto;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.rt-content.no-toolbar {
+	height: 484px;
+	overflow: auto;
+}
+
+.rt-title {
+	height: 54px;
+	margin: 0 15px;
+	border-bottom: 1px solid #ddd;
+	padding-top: 13px;
+}
+
+.rt-title h4 {
+	margin: 7px 0 0 0;
+}
+
+.rt-content .form-group p:last-child,
+.rt-content .form-group address:last-child {
+	margin-bottom: 0;
+}
+
+.rt-sub-title h4 {
+	font-size: 14px;
+	margin-top: 0;
+}
+
+.rt-sub-title,
+.rt-sub-title-accordion {
+	color: #f7941d;
+	margin-bottom: 5px;
+}
+
+.rt-sub-title-accordion {
+	margin-bottom: 1px;
+	color: #003f88;
+	background: #e9eef4;
+	padding-right: 10px;
+}
+
+.rt-sub-title-accordion h4 {
+	cursor: pointer;
+	font-size: 13px;
+}
+
+.rt-sub-title-accordion:first-child {
+	margin-top: -6px;
+}
+
+.rt-accord-content {
+	margin-top: 4px;
+	float: left;
+}
+
+.rt-accord-content .green-tick-1 {
+	margin-left: 1px;
+}
+
+.rt-content .alert-esclemation {
+	vertical-align: top;
+}
+
+.rt-status-hover {
+	position: absolute;
+	right: -5px;
+	top: 7px;
+	opacity: 0;
+	-webkit-transition: opacity 0.9s;
+	-moz-transition: opacity 0.9s;
+	transition: opacity 0.9s;
+	z-index: 892;
+}
+
+.rt-status-hover i {
+	background-size: 15px;
+	display: block;
+	float: left;
+	margin: 0 2px;
+}
+
+.rt-content .form-group:hover .rt-status-hover {
+	opacity: 1;
+}
+
+.lt-content .form-group:hover .rt-status-hover {
+	opacity: 1;
+}
+
+
+/* reseting checkbox label margin-right:to set esclemation icons */
+
+.rt-content div.custom>label {
+	margin-right: 0;
+}
+
+
+/*Left block*/
+
+.lt-block,
+.lt-block-less {
+	width: 686px;
+	position: relative;
+	float: left;
+	-webkit-transition: width 0.8s;
+	-moz-transition: width 0.8s;
+	transition: width 0.8s;
+}
+
+.lt-block-fullwidth {
+	width: 875px !important;
+}
+
+.lt-block-less {
+	width: 610px;
+}
+
+
+/*SideNav Bar setting*/
+
+.lt-content {
+	/* height: 417px; */
+	height: 375px;
+	overflow: auto;
+	margin-top: 10px;
+	padding-right: 10px;
+}
+
+.sidebar-wrapper {
+	margin-top: 10px;
+	/* height: 460px;*/
+	height: 416px;
+	width: 135px;
+	float: left;
+	border: 1px solid #ddd;
+}
+
+.s-toggle-icon {
+	width: 133px;
+	height: 29px;
+	border-bottom: 1px solid #ddd;
+	padding: 0 5px;
+}
+
+.s-toggle-icon .fa {
+	font-weight: bold;
+	line-height: 29px;
+}
+
+.s-toggle-icon:hover {
+	font-size: 18px;
+	color: #003F88;
+}
+
+
+/*s- : Slider */
+
+.content-wrapper .s-toggle-icon {
+	display: none;
+}
+
+.sidebar-wrapper.hide+.content-wrapper .s-toggle-icon {
+	display: block;
+	position: absolute;
+	width: 19px;
+	height: 30px;
+	left: -25px;
+	border: 1px solid #ddd;
+}
+
+.s-area-scroll {
+	overflow-y: auto;
+	overflow-x: hidden;
+	/*height: 428px;*/
+	height: 385px;
+}
+
+.s-area {
+	padding: 10px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+
+.s-area img {
+	max-width: 106px;
+	height: 70px;
+	min-width: 96px;
+	/* float: left; */
+	/* border: 1px solid #ccc; */
+	margin-bottom: 3px;
+}
+
+.s-area:hover {
+	background: #f4f4f4;
+	cursor: pointer;
+}
+
+.s-area.active {
+	background: #E7E7E7;
+}
+
+.s-area>p {
+	text-align: left;
+}
+
+
+/*.s-area-img,
+.s-area-img img {
+	min-width: 96px;
+	max-width: 106px;
+	height: 70px;
+	margin-bottom: 5px;
+	border: 1px solid #ddd;
+}*/
+
+
+/*pop-up inline-error/alert/success*/
+
+.pop-up-msg {
+	display: block;
+	position: absolute;
+	text-align: center;
+	z-index: 999;
+	padding: 5px 0;
+	top: 54px;
+	width: 95.6%;
+}
+
+.pop-up-msg i {
+	padding-top: 3px;
+	padding-right: 10px;
+}
+
+.success {
+	background-color: #e8f7fa;
+	border-color: #c7e8f3;
+	color: #0081b8;
+}
+
+.on-screen-success {
+	padding: 4px 10px;
+	text-align: center;
+}
+
+.failure {
+	background-color: #fae8e8;
+	border-color: #f3c7c7;
+	color: #a33539;
+}
+
+.lt-block .pop-up-msg {
+	top: 0;
+	width: 94.6%;
+}
+
+.pop-up-msg.show+.doc-thumb-panel {
+	top: 81px;
+}
+
+.lt-block .pop-up-msg.show+.doc-thumb-panel {
+	top: 27px;
+}
+
+.lt-content.soa {
+	/* height: 339px; */
+	height: 294px;
+	overflow: auto;
+}
+
+.lt-content.no-toolbar {
+	/*height: 460px;*/
+	height: 415px;
+}
+
+.lt-content .row {
+	margin-right: 0;
+}
+
+
+/*Upload Contents area*/
+
+.pshc-upload-content-holder {
+	max-width: 100%;
+	height: 100%;
+}
+
+
+/*========================================================================*/
+
+
+/*Tool bar styles for RT and LT block*/
+
+.tool-bar {
+	width: 97.5%;
+	background: #f4f4f4;
+	display: inline-block;
+}
+
+.rt.tool-bar {
+	/*width: 97.5%;*/
+	width: 99.9%;
+	/*height: 52px;*/
+	height: 55px;
+}
+
+.lt.tool-bar {
+	width: 98.3%;
+	height: 55px;
+}
+
+.tools {
+	margin-bottom: 0;
+}
+
+.tools>li {
+	height: 33px;
+	line-height: 33px;
+	vertical-align: middle;
+	display: inline-block;
+	border-right: 2px solid #e1e1e1;
+	border-left: 2px solid #ffffff;
+	padding: 0 8px;
+	margin-right: -4px;
+}
+
+.tools>li:last-child {
+	border: none;
+}
+
+.tools>li *:not(:only-child) {
+	padding: 0 3px;
+}
+
+.tools>li a,
+.tools>li a.disable {
+	cursor: pointer;
+	min-height: 100%;
+	background-position: center;
+}
+
+.tools>li.active {
+	border: 1px solid #8DC2FF;
+	background: #8DC2FF;
+}
+
+.rt.tool-bar .tools>li,
+.lt.tool-bar .tools>li {
+	border: none;
+	height: 52px;
+	line-height: 52px;
+}
+
+
+/*Rt-block last saved styles*/
+
+.last-saved {
+	color: #7488a1;
+	font-size: 11px;
+}
+
+.last-saved small {
+	margin-top: 10px;
+	line-height: 10px;
+	display: block;
+	font-style: italic;
+}
+
+
+/*lt-tool: (1/32) txt-setting*/
+
+.tool-box-up-down-count {
+	display: inline-block;
+	float: left;
+}
+
+
+/*Tool-bar: View uploaded documents in table*/
+
+.doc-s-table {
+	position: absolute;
+	top: 32px;
+	left: -5px;
+	background: #8DC2FF;
+	width: 500px;
+}
+
+.doc-s-table .table {
+	width: 480px;
+	margin: 10px;
+	background: #ffffff;
+	box-sizing: border-box;
+}
+
+
+/*========================================================================*/
+
+
+/*TOOL BAR ICONS*/
+
+.tool-box-down-arrow-normal {
+	background: url(../images/tool_box_down_arrow_normal.png) no-repeat;
+}
+
+.tool-box-up-arrow-normal {
+	background: url(../images/tool_box_up_arrow_normal.png) no-repeat;
+}
+
+.tool-box-down-arrow-normal.disable {
+	background: url(../images/tool_box_down_arrow_normal_disable.png) no-repeat;
+}
+
+.tool-box-up-arrow-normal.disable {
+	background: url(../images/tool_box_up_arrow_normal_disable.png) no-repeat;
+}
+
+.tool-box-zoom-in {
+	background: url(../images/tool_box_zoom_in.png) no-repeat;
+}
+
+.tool-box-zoom-out {
+	background: url(../images/tool_box_zoom_out.png) no-repeat;
+	margin-left: 5px;
+}
+
+.tool-box-zoom-in-1 {
+	background: url(../images/tool_box_zoom_in1.png) no-repeat;
+}
+
+.tool-box-zoom-out-1 {
+	background: url(../images/tool_box_zoom_out1.png) no-repeat;
+	margin-left: 5px;
+}
+
+.tool-share-link-icon-xs,
+.tool-share-link-icon {
+	background: url(../images/share_link_icon.png) no-repeat;
+}
+
+.tool-box-print-icon {
+	background: url(../images/tool_box_print_icon.png) no-repeat;
+}
+
+.tool-box-view-annotation-icon {
+	background: url(../images/tool_box_view_annotation_icon.png) no-repeat;
+}
+
+.tool-box-edit-annotation-icon {
+	background: url(../images/tool_box_edit_annotation_icon.png) no-repeat;
+	margin-left: 5px;
+}
+
+.tool-box-help-icon {
+	background: url(../images/tool_box_help_icon.png) no-repeat;
+}
+
+.tool-box-modal-cut-icon {
+	background: url(../images/modal-cut.png) no-repeat;
+}
+
+.tool-box-popup-list-view-icon {
+	background: url(../images/tool_box_popup_list_view_icon.jpg) no-repeat;
+}
+
+.tool-box-popup-thumb-list-view-icon {
+	background: url(../images/tool_box_popup_tnumb_list_view_icon.jpg) no-repeat;
+}
+
+.tool-box-modal-remap {
+	background: url(../images/modal-remap.png) no-repeat;
+}
+
+.tool-box-image-split-icon {
+	background: url(../images/tool_box_image_split_icon.png) no-repeat;
+}
+
+
+/*OTHER PAGE ICONS*/
+
+.alert-esclemation {
+	background: url(../images/alert_esclemation.png) no-repeat 100%;
+}
+
+.mobile-icon {
+	background: url(../images/mobile_icon.png) no-repeat;
+}
+
+.landline-icon {
+	background: url(../images/landline_icon.png) no-repeat;
+}
+
+.landmark-address-icon {
+	background: url(../images/landmark_address_icon.png) no-repeat;
+}
+
+.negative-area-indication {
+	background: url(../images/profile_warning.png) no-repeat;
+}
+
+.profile-status-alert-icon-incomplete,
+.profile-status-alert-icon-incomplete-xs {
+	background: url(../images/profile_status_alert_icon_incomplete.png) no-repeat;
+}
+
+.rerun-icon {
+	background: url(../images/rerun_icon.png) no-repeat;
+}
+
+.rerun-icon-xs {
+	background: url(../images/rerun_icon.png) no-repeat;
+	background-size: 27px 24px;
+}
+
+.replay-icon {
+	background: url(../images/replay_icon.png) no-repeat;
+}
+
+.deviation-icon {
+	background: url(../images/deviation_icon.png) no-repeat;
+}
+
+.deviation-small {
+	background: url(../images/deviationBtn.png) no-repeat;
+}
+
+.query-small {
+	background: url(../images/queryBtn.png) no-repeat;
+	display: none;
+}
+
+.query-small-others-temp {
+	background: url(../images/quiry_icon.png) no-repeat;
+	background-size: 75%;
+	display: inline-block;
+	cursor: pointer;
+	padding-left: 0px;
+	padding-right: 25px;
+	height: 25px;
+	width: 26px;
+	opacity: 0;
+	-webkit-transition: opacity 0.9s;
+	-moz-transition: opacity 0.9s;
+	transition: opacity 0.9s;
+	z-index: 892;
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+.fadeOut {
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
+
+.query-small-others {
+	font-size: 18px;
+	font-weight: bold;
+	color: #00709C;
+	height: 25px;
+	width: 25px;
+	padding-left: 10px;
+	padding-right: 25px;
+	/*opacity: 0;
+	-webkit-transition: opacity 0.9s;
+	-moz-transition: opacity 0.9s;
+	transition: opacity 0.9s;*/
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	z-index: 892;
+}
+
+.query-small-others-view {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+.query-small-others-hide {
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
+
+.quiry-icon {
+	background: url(../images/quiry_icon.png) no-repeat;
+}
+
+.cash-collectable {
+	background: url(../images/cash.png) no-repeat;
+	background-size: 17px;
+	display: block !important;
+}
+
+.sfe-remarks {
+	background: url(../images/sfe_remarks.png) no-repeat;
+}
+
+.audit-log-icon {
+	background: url(../images/audit_log_icon.png) no-repeat;
+}
+
+.count-down-icon {
+	background: url(../images/count_down_icon.png) no-repeat;
+}
+
+.edit-icon {
+	background: url(../images/edit_icon.png) no-repeat;
+}
+
+.save-icon {
+	background: url(../images/save_icon.png) no-repeat;
+}
+
+.excel-file-icon {
+	background: url(../images/excel_file_icon.png) no-repeat;
+}
+
+
+/*LeadType*/
+
+.sales-individual-selected {
+	background: url(../images/sales_individual_selected.png) no-repeat;
+}
+
+.sales-corporate-normal {
+	background: url(../images/sales_corporate_normal.png) no-repeat;
+}
+
+.sales-corporate-selected {
+	background: url(../images/sales_corporate_selected.png) no-repeat;
+}
+
+.sales-individual-normal {
+	background: url(../images/sales_individual_normal.png) no-repeat;
+}
+
+
+/*Carousal icons*/
+
+.slider-arrow-right-normal {
+	background: url(../images/slider_arrow_right_normal.png) no-repeat;
+}
+
+.slider-arrow-left-normal {
+	background: url(../images/slider_arrow_left_normal.png) no-repeat;
+}
+
+.slider-arrow-right-active {
+	background: url(../images/slider_arrow_right_active.png) no-repeat;
+}
+
+.slider-arrow-left-active {
+	background: url(../images/slider_arrow_left_active.png) no-repeat;
+}
+
+
+/*guarator-icon*/
+
+.guarator-icon {
+	background: url(../images/guarator_icon.png) no-repeat;
+}
+
+
+/*animate slide Down*/
+
+.slide-down {
+	background: url(../images/expand.png) no-repeat;
+}
+
+
+/*========================================================================*/
+
+
+/*Icons of toolbars and other icons of pages*/
+
+
+/* TOOL BAR ICONS*/
+
+.tools>li a.disable {
+	cursor: not-allowed;
+}
+
+.tool-box-down-arrow-normal,
+.tool-box-up-arrow-normal,
+.tool-box-down-arrow-normal.disable,
+.tool-box-up-arrow-normal.disable,
+.tool-box-zoom-in,
+.tool-box-zoom-out,
+.tool-box-zoom-in-1,
+.tool-box-zoom-out-1,
+.tool-box-print-icon,
+.tool-box-edit-annotation-icon,
+.tool-box-view-annotation-icon,
+.tool-box-help-icon,
+.tool-box-modal-cut-icon,
+.tool-box-popup-list-view-icon,
+.tool-box-popup-thumb-list-view-icon,
+.tool-box-modal-remap,
+.tool-box-image-split-icon,
+.tool-share-link-icon,
+.tool-share-link-icon-xs,
+.deviation-icon,
+.quiry-icon,
+.sfe-remarks,
+.audit-log-icon,
+.sales-individual-selected,
+.sales-corporate-normal,
+.sales-corporate-selected,
+.sales-individual-normal,
+.edit-icon,
+.save-icon,
+.excel-file-icon,
+.count-down-icon,
+.slide-down {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.tool-box-down-arrow-normal,
+.tool-box-up-arrow-normal,
+.tool-box-down-arrow-normal.disable,
+.tool-box-up-arrow-normal.disable {
+	width: 16px;
+	height: 15px;
+	float: left;
+}
+
+.tool-box-zoom-in,
+.tool-box-zoom-out {
+	width: 15px;
+	height: 15px;
+}
+
+
+/*Zoom In/Out with Big icons*/
+
+.tool-box-zoom-in-1,
+.tool-box-zoom-out-1 {
+	width: 23px;
+	height: 23px;
+}
+
+.tool-box-print-icon {
+	width: 18px;
+	height: 15px;
+}
+
+.tool-box-edit-annotation-icon,
+.tool-box-view-annotation-icon {
+	width: 22px;
+	height: 26px;
+}
+
+.tool-box-help-icon {
+	width: 23px;
+	height: 19px;
+}
+
+.tool-box-modal-cut-icon {
+	width: 27px;
+	height: 20px;
+}
+
+.tool-box-popup-list-view-icon,
+.tool-box-popup-thumb-list-view-icon {
+	width: 30px;
+	height: 21px;
+}
+
+.tool-box-modal-remap {
+	width: 15px;
+	height: 16px;
+}
+
+.tool-box-image-split-icon {
+	width: 16px;
+	height: 15px;
+	background-size: 16px 15px;
+}
+
+.slide-down {
+	width: 6px;
+	height: 6px;
+}
+
+
+/* OTHER PAGE ICONS*/
+
+.alert-esclemation {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.mobile-icon,
+.landline-icon,
+.tool-share-link-icon {
+	width: 29px;
+	height: 29px;
+	display: inline-block;
+}
+
+.tool-share-link-icon-xs {
+	width: 19px;
+	height: 19px;
+	background-size: 19px 19px;
+}
+
+.landmark-address-icon {
+	width: 12px;
+	height: 17px;
+	display: inline-block;
+}
+
+.negative-area-indication {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	float: right;
+	margin-right: 55px;
+}
+
+.profile-status-alert-icon-incomplete,
+.profile-status-alert-icon-incomplete-xs {
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+	vertical-align: bottom;
+	cursor: pointer;
+	background-size: 17px;
+}
+
+.profile-status-alert-icon-incomplete-xs {
+	background-size: 14px;
+	float: left;
+	margin-top: 2px;
+}
+
+.rerun-icon,
+.rerun-icon-xs {
+	width: 33px;
+	height: 27px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.replay-icon {
+	width: 11px;
+	height: 12px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.deviation-icon,
+.quiry-icon,
+.sfe-remarks,
+.audit-log-icon,
+.sales-individual-selected,
+.sales-corporate-normal,
+.sales-corporate-selected,
+.sales-individual-normal {
+	width: 32px;
+	height: 32px;
+}
+
+.query-small,
+.deviation-small,
+.cash-collectable {
+	width: 17px;
+	height: 17px;
+	display: none;
+	cursor: pointer;
+}
+
+.edit-icon {
+	width: 15px;
+	height: 15px;
+	margin-top: 2px;
+}
+
+.save-icon {
+	width: 18px;
+	height: 18px;
+	margin-top: 2px;
+}
+
+.excel-file-icon {
+	width: 24px;
+	height: 28px;
+}
+
+.count-down-icon {
+	width: 29px;
+	height: 29px;
+}
+
+
+/*PHSC Carousal Images*/
+
+.slider-arrow-right-normal,
+.slider-arrow-left-normal,
+.slider-arrow-right-active,
+.slider-arrow-left-active {
+	width: 26px;
+	height: 26px;
+	display: inline-block;
+	cursor: pointer;
+	margin-top: 12px;
+}
+
+
+/*profile Guarator icon*/
+
+.guarator-icon {
+	width: 26px;
+	height: 26px;
+	display: inline-block;
+}
+
+
+/*Profile Base template*/
+
+
+/*========================================================================*/
+
+
+/*setting space btw side nav bar and panel aside*/
+
+.pshc-side-nav .nav.nav-pills.nav-stacked {
+	margin-bottom: 5px;
+}
+
+
+/*Page top icons like devaiations , query*/
+
+.pshc-top-icons {
+	margin-bottom: 0;
+	margin-top: 7px;
+	font-size: 13px;
+}
+
+.pshc-top-icons li:not(:last-child) {
+	margin-right: 10px;
+	padding: 0;
+}
+
+.pshc-top-icons li a>i {
+	background-size: 22px;
+	vertical-align: middle;
+	margin-top: 4px;
+	width: 25px;
+}
+
+
+/*Profile/Tvr pgs right side smaill Panel*/
+
+.model-decision {
+	font-size: 12px;
+	clear: both;
+}
+
+.panel-aside {
+	width: 18%;
+	margin: 0 0 0px 5px;
+	float: right;
+	clear: right;
+}
+
+.panel {
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+}
+
+
+/*fixing min-heigt for a panel to avoid min-height issue with aside panel*/
+
+.panel-default-height {
+	min-height: 316px;
+	z-index: 5;
+}
+
+.panel-height-fix {
+	background: #ffffff;
+	width: 81.5%;
+	position: absolute;
+	top: 0;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.panel-wrapper {
+	position: relative;
+	z-index: 0;
+}
+
+.panel-wrapper:before,
+.panel-wrapper:after {
+	content: " ";
+	display: table;
+}
+
+.panel-wrapper:after {
+	clear: both;
+}
+
+
+/*Disable feature*/
+
+.disable-field {
+	pointer-events: none;
+	cursor: not-allowed;
+}
+
+.rt-block .disable-field+div.form-group>span.set-border-bottom:first-child {
+	display: none;
+}
+
+.rt-block .disable-field span.set-border-bottom:first-child {
+	display: none;
+}
+
+.disable-field .chk-content .chk-innner-txt {
+	text-decoration: none;
+	color: #52617a;
+}
+
+.disable-field-icon {
+	cursor: not-allowed;
+}
+
+
+
+/*========================================================================*/
+
+
+/* To provide VD look and feel, below classes are used to fix aliment issues*/
+
+.space-fix .form-group {
+	padding-left: 0;
+	margin-bottom: 2px;
+}
+
+.space-fix .set-border-bottom {
+	margin-bottom: 10px;
+}
+
+
+/*========================================================================*/
+
+
+/*profile pic*/
+
+.pr-pic,
+.pr-pic img {
+	width: 134px;
+	height: 140px;
+	position: relative;
+}
+
+.tele-prf-pic,
+.tele-prf-pic img {
+	width: 80px;
+	height: 80px;
+	position: relative;
+}
+
+.pr-guarator-icon {
+	position: absolute;
+	top: 0;
+	right: -3px;
+}
+
+
+/*Profile Redesign:*/
+
+.pr-left {
+	width: 579px;
+	padding-right: 15px;
+	border-right: 1px solid #ddd;
+}
+
+.pr-right {
+	width: 211px;
+}
+
+.pr-title a {
+	font-size: 13px;
+	color: #0081b8;
+	text-decoration: underline;
+}
+
+.pr-title a.active {
+	font-size: 13px;
+	color: inherit;
+	text-decoration: none;
+}
+
+.pr-title a i {
+	margin-right: 10px;
+	float: left;
+}
+
+.pr-title .list-group-item {
+	border: none;
+	padding: 1px 8px;
+	vertical-align: top;
+}
+
+.pr-title .list-group-item:not(:last-child) {
+	border-right: 1px solid #ddd;
+}
+
+.pr-pic-block {
+	width: 134px;
+	margin-right: 15px;
+	float: left;
+}
+
+.pr-data-block {
+	width: 73.5%;
+}
+
+.pr-type {
+	background: #e8f7fa;
+	color: #027fc1;
+	border: 1px solid #cee6f2;
+}
+
+.pr-address-home {
+	min-height: 161px;
+}
+
+
+/* styles for txt reside in bottom of pp*/
+
+.pr-risk-info label {
+	color: #8995a1;
+	font-weight: normal;
+}
+
+.pr-risk-info p {
+	color: #f7941d;
+}
+
+.scroe-board-rerun {
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	display: inline-block;
+	padding: 5px 1px 0 5px;
+	margin-left: 10px;
+	float: left;
+}
+
+.score-card-tick {
+	margin-left: 5px;
+	float: left;
+}
+
+
+/*========================================================================*/
+
+
+/*Rt-content */
+
+
+/*check box : inner text with underline*/
+
+.rt-bar {
+	position: absolute;
+	top: 0;
+	right: 0px;
+	z-index: 999;
+}
+
+.rt-block .checkbox.custom {
+	margin-bottom: 0;
+}
+
+.rt-block .form-group,
+.rt-block-less .form-group {
+	margin-bottom: 10px;
+}
+
+.rt-block .checkbox.custom .rc-label,
+.lt-block-rc-label-color .checkbox.custom .rc-label {
+	color: #003f88;
+}
+
+.rt-block .checkbox.custom:hover .query-small {
+	display: inline-block;
+}
+
+.checkbox.no-check-box label {
+	padding: 0 !important;
+}
+
+.chk-content {
+	margin-left: 25px;
+	position: relative;
+	/* z-index: 888; */
+}
+
+.chk-content .chk-innner-txt,
+.chk-content .chk-innner-txt-no-line {
+	display: inline-block;
+	text-decoration: underline;
+	padding-left: 0 !important;
+	clear: both;
+	color: #428bca;
+}
+
+.chk-content .chk-innner-txt::first-letter,
+.chk-content .chk-innner-txt-no-line::first-letter,
+.chk-content>p::first-letter {
+	text-transform: uppercase;
+}
+
+.chk-content address.chk-innner-txt-no-line {
+	color: #428bca;
+	margin-bottom: 0;
+}
+
+.chk-content .chk-innner-txt-no-line {
+	text-decoration: none;
+	cursor: default;
+}
+
+.chk-content .form-control {
+	width: 96%;
+	margin-top: 3px;
+}
+
+.chk-content .input-group .form-control {
+	margin-top: 0;
+}
+
+.chk-in-icon {
+	float: right;
+}
+
+.chk-in-icon i {
+	margin: 2px 0 0 3px;
+	width: 15px;
+	height: 15px;
+	vertical-align: top;
+	background-size: 15px;
+}
+
+.chk-text-edit {
+	color: #f7941d !important;
+}
+
+
+/*Lt-Content*/
+
+
+/*========================================================================*/
+
+
+/*pr-custom-list-group item in : Doc list All queries*/
+
+.pr-custom-lgi {
+	color: #52617a;
+	margin-bottom: 0;
+}
+
+.pr-custom-lgi .list-group-item {
+	padding: 20px 15px 8px 30px;
+}
+
+.pr-custom-lgi .list-group-item .fa-caret-down {
+	margin-left: -15px;
+}
+
+.pr-custom-lgi .list-group-item .pr-cust-list {
+	color: #0081b8;
+	font-size: 20px;
+}
+
+.pr-custom-lgi .list-group-item .pr-cust-list p {
+	color: #52617a;
+	font-size: 12px;
+	vertical-align: middle;
+}
+
+
+/*========================================================================*/
+
+
+/*styles for listing applcaint in modal window*/
+
+.pr-app-list-view {
+	border: 1px solid #ddd;
+	padding: 10px;
+	border-radius: 3px;
+	margin: 10px 0;
+	-webkit-box-shadow: 0px 4px 5px -2px #ddd;
+	-moz-box-shadow: 0px 4px 5px -2px #ddd;
+	box-shadow: 0px 4px 5px -2px #ddd;
+}
+
+.pr-app-list-view p {
+	margin-top: 5px;
+	margin-bottom: 0;
+}
+
+.pr-app-list-view p.txt-color-5 {
+	color: #003f88;
+}
+
+.pr-app-list-view select.form-control:not(:last-child) {
+	margin: 10px 0 15px 0;
+}
+
+.pr-app-list-view p i {
+	margin-left: 10px;
+}
+
+
+/*========================================================================*/
+
+
+/*List of Deviations : txtarea styles to give remarks*/
+
+.pr-list-deviation-txtArea {
+	margin-left: 25px;
+	margin-top: 7px;
+	width: 80%;
+}
+
+
+/*========================================================================*/
+
+
+/*Cibil comparison report with Two tool bars in LT*/
+
+.compare-content {
+	height: 190px;
+	padding: 15px;
+	overflow: auto;
+	width: 85%;
+}
+
+.pan-photo-block {
+	width: 225px;
+	height: 160px;
+	line-height: 160px;
+	display: inline-block;
+	border-right: 1px solid #ddd;
+	float: left;
+
+}
+
+.pan-sign-block {
+	width: 230px;
+	height: 160px;
+	line-height: 160px;
+	vertical-align: middle;
+	float: left;
+	padding: 0 15px;
+	display: inline-block;
+}
+
+.compare-content img {
+	height: 113px;
+}
+
+
+/*========================================================================*/
+
+
+/*Profile Document carousal View*/
+
+.pr-c-viewer-time {
+	margin: 10px 0 0px 10px;
+}
+
+.pr-c-viewer {
+	width: 442px;
+	height: 235px;
+	padding: 4px;
+	margin: 0px 0 10px 10px;
+	border: 1px solid #ddd;
+	position: relative;
+}
+
+.pr-c-viewer-confirm-chk {
+	position: absolute;
+	right: -4px;
+	top: -7px;
+	background: #fff;
+	border-radius: 15px;
+	width: 18px;
+	height: 18px;
+}
+
+.pr-c-list-img-block {
+	margin-left: 5px;
+	margin-bottom: 20px;
+}
+
+.pr-c-list-img-block li {
+	vertical-align: top;
+}
+
+.pr-c-list-img-block li:not(:first-child):not(:last-child) {
+	width: 76px;
+	height: 46px;
+	border: 1px solid #ddd;
+	padding: 2px;
+	margin-right: 12px;
+	cursor: pointer;
+}
+
+.pr-c-list-img-block li:first-child {
+	margin-right: 10px;
+}
+
+.pr-c-list-img-block li:last-child {
+	margin-right: 10px;
+}
+
+.pr-c-list-img-block li:not(:first-child) img,
+.pr-c-list-img-block li:not(:last-child) img,
+.pr-c-view-image {
+	min-width: 100%;
+	height: 100%;
+}
+
+
+/*========================================================================*/
+
+
+/* Transaction & Financials */
+
+.tr-chk-spliter li {
+	vertical-align: middle;
+	margin-bottom: 10px;
+}
+
+.tr-chk-spliter li>span {
+	display: inline-block;
+	width: 70px;
+	color: #003f88;
+}
+
+.tr-chk-spliter li>span+.form-control,
+.tr-chk-spliter li>span+p {
+	width: 90px;
+	display: inline-block;
+}
+
+
+/*reseting marign of p tag inside form-group :rt-content*/
+
+.reset-p p {
+	margin: 0;
+}
+
+
+/*lt-block:resetting checkbox margin-bottom="0"*/
+
+.lt-block-rc-label-color .checkbox.custom {
+	margin-bottom: 0;
+}
+
+
+/*setting tick mark on input field : pshc->Asset & Funding ->loan details modal*/
+
+.fc-tick-mark-fix {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.track-upload .form-control {
+	margin-right: 3px;
+}
+
+.track-upload .custom-ip-group-btn {
+	padding-top: 7px;
+}
+
+
+/*========================================================================*/
+
+
+/*Tele verifacation page styles*/
+
+.tele-pr-block,
+.tele-ref-block {
+	/* width: 191px;*/
+	width: 204px;
+	border: 1px solid #ddd;
+	padding: 15px;
+	margin: 0 15px 15px 0;
+	display: inline-block;
+	-webkit-box-shadow: 0 2px 3px #eaeaea;
+	-moz-box-shadow: 0 2px 3px #eaeaea;
+	box-shadow: 0 2px 3px #eaeaea;
+}
+
+.tele-ref-block {
+	/*width: 296px;*/
+	width: 318px;
+}
+
+div.tele-pr-block:last-child {
+	margin-right: 0;
+}
+
+.tele-relationship {
+	margin-bottom: 20px;
+	color: #f7941d;
+}
+
+.tele-prf-pic {
+	width: 80px;
+	height: 80px;
+	border: none;
+}
+
+.tele-phone {
+	color: #003f88;
+	padding: 6px 0 0 33px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.tele-phone.landline-icon {
+	margin-bottom: 20px;
+}
+
+
+/*========================================================================*/
+
+
+/*Borrower Tele Verification(tv)*/
+
+.tvr-border {
+	display: inline-block;
+	width: 1px;
+	height: 50px;
+	float: left;
+}
+
+.tvr-border + .form-group.col-xs-3 {
+	width: 24.8%;
+}
+
+
+/*========================================================================*/
+
+
+/*Dashboard*/
+
+.dash-lt,
+.dash-md,
+.dash-rt {
+	width: 383px;
+	height: 258px;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.dash-md {
+	width: 280px;
+	margin-right: 2px
+}
+
+.dash-rt {
+	width: 348px;
+	margin-right: 0;
+}
+
+.dash-scroll,
+.dash-scroll-1 {
+	min-width: 328px;
+	height: 183px;
+	overflow: auto;
+	padding-top: 10px;
+}
+
+.dash-scroll-1 {
+	height: 136px;
+	padding-top: 0;
+}
+
+.query-square {
+	width: 55px;
+	height: 55px;
+	margin: 40px 13px 10px 13px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 55px;
+	color: #ffffff;
+	display: inline-block;
+	border-radius: 3px;
+	/*cursor: pointer;
+	cursor: none;*/
+}
+
+.raised {
+	background: #7ac79b;
+}
+
+.pending {
+	background: #ff807a;
+}
+
+.resolved {
+	background: #7cb0bb;
+}
+
+div.query-square:last-child {
+	margin-right: 0;
+}
+
+
+/*========================================================================*/
+
+.pos-rel {
+	position: relative;
+}
+
+.fix-all {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.fix-b-all {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.fix-bottom {
+	bottom: 0;
+	position: absolute;
+}
+
+.fix-rt-bottom {
+	right: 0;
+	bottom: 0;
+	position: absolute;
+}
+
+
+/*========================================================================*/
+
+.custom-checkbox-checked {
+	background: url(../images/check_on.png) no-repeat;
+	width: 20px;
+	height: 18px;
+	display: inline-block;
+	padding-left: 20px;
+}
+
+.custom-checkbox-unchecked {
+	background: url(../images/check_off.png) no-repeat;
+	width: 20px;
+	height: 18px;
+	display: inline-block;
+	padding-left: 20px;
+}
+
+.ch-checkbox {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+
+/*========================================================================*/
+
+
+/*PSHC: header Count-down styles*/
+
+.nav-counter .count-down-icon {
+	background-size: 29px;
+}
+
+.nav-counter {
+	padding-top: 15px;
+}
+
+.nav-counter li {
+	padding: 0 10px 0 8px;
+	border-color: #adb7c3;
+	margin-top: -6px;
+}
+
+.nav-counter li:first-child {
+	margin-top: -3px;
+	padding-right: 0;
+}
+
+.nav-counter li p {
+	color: #0380c0;
+	font-size: 13px;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.nav-counter li p+div {
+	color: #0380c0;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+
+/*========================================================================*/
+
+.pr-top-block {
+	display: inline-block;
+	min-height: 100px;
+	float: left;
+	padding: 0 11px;
+	color: #023c86;
+	border-right: 1px solid #ddd;
+}
+
+.less-hight .pr-top-block {
+	min-height: 20px;
+}
+
+.pr-top-block p {
+	margin-bottom: 4px;
+}
+
+.pr-top-1 {
+	width: 188px;
+}
+.pr-top-custom-1 {
+	width: 300px;
+}
+.pr-top-2 {
+	width: 207px;
+}
+
+.pr-top-3 {
+	width: 225px;
+}
+
+.pr-top-4 {
+	width: 193px;
+}
+
+
+/*.pr-top-3 {
+	width: 195px;
+	display: inline-block;
+	float: left;
+	border-right: 1px solid #ddd;
+}*/
+
+
+/*.pr-top-4 {
+	width: 160px;
+	padding-left: 10px;
+	display: inline-block;
+}*/
+
+
+/*========================================================================*/
+
+
+/*Sprint 2 - PSHC - Viability Report Graph*/
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+.bar {
+	fill: steelblue;
+}
+
+.dashboardClick {
+	cursor: pointer;
+}
+
+.dashboardNoClick, .dashboardNoClick:hover {
+	color: #52617a;
+	cursor: text;
+	text-decoration: none;
+}
+
+
+/*========================================================================*/
+
+
+/*adding classes for inline styles in other details*/
+
+
+/* div displaying negative area*/
+
+.negative-area {
+	width: 240px;
+	height: 40px;
+	overflow: auto;
+}
+
+.label-color {
+	color: red;
+}
+
+
+/*Customer Signature / Thumb Impression*/
+
+.signature-style {
+	margin: 0px 10px 0px 0px;
+	height: 60px;
+	width: 336px;
+}
+
+
+/*lead capture subnavigation No loan details available! alignment*/
+
+.no-record-alingment {
+	height: 80px;
+	margin-top: 20px;
+}
+
+
+/*create lead presanction comment alignment*/
+
+.comment-align {
+	margin: 0px 10px 0px 0px;
+	height: 60px;
+	width: 336px;
+}
+
+
+/*kyc coapplicant No Co-Applicants found*/
+
+.no-applicant {
+	height: 230px;
+	margin-top: 20px;
+}
+
+
+/*kyc docproof No record found*/
+
+.no-record {
+	height: 90px;
+	margin-top: 20px;
+}
+
+
+/*vehicle html vehicle image*/
+
+.float {
+	float: right;
+}
+
+.display-none {
+	display: none;
+}
+
+.word-break {
+	word-wrap: break-word;
+}
+
+
+/*========================================================================*/
+
+
+/*sprint 3: others panel Design*/
+
+.ot-panel {
+	border: 1px solid #ebebeb;
+}
+
+.ot-panel .panel-heading {
+	border-color: #ebebeb;
+	background: #f3f4f6;
+	color: #003f88;
+	min-width: 100%;
+	float: left;
+}
+
+.ot-panel .panel-heading span.title {
+	margin-top: 4px;
+	font-size: 13px;
+	float: left;
+}
+
+.ot-panel .panel-heading i.ot-iocns {
+	height: 25px;
+}
+
+.ot-image {
+	width: 99px;
+	height: 46px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ebebeb;
+}
+
+.ot-name {
+	margin-bottom: 4px;
+	float: left;
+	word-break: break-all;
+	color: #52617a;
+}
+
+
+/*========================================================================*/
+
+.ot-dl dt {
+	text-align: left;
+	font-weight: normal;
+	margin-bottom: 3px;
+}
+
+.ot-dl dd {
+	color: #808080 !important;
+	margin-bottom: 3px;
+}
+
+
+/*TL dashboard Map default height*/
+
+.tl-map {
+	width: 100%;
+	height: 296px;
+}
+
+
+/*========================================================================*/
+
+.search-existing .form-group label {
+	color: #ffffff;
+}
+
+.search-existing {
+	background: #7c8da1;
+	border-color: transparent;
+}
+
+
+/*========================================================================*/
+
+
+/*Bulk vehice slider*/
+
+.v-slider {
+	margin: 10px 0;
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.s-prv,
+.s-nxt {
+	width: 26px;
+	font: 0/0 a;
+}
+
+.s-prv:before,
+.s-nxt:before {
+	content: ' ';
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.s-prv i,
+.s-nxt i {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 0;
+	display: inline-block;
+	vertical-align: middle;
+	font: 16px/1 Arial, sans-serif;
+}
+
+.s-content {
+	margin: 0 10px;
+}
+
+.s-content>*:first-child {
+	margin-left: 0;
+}
+
+.s-content>*:last-child {
+	margin-right: 0;
+}
+
+.v-s-icon-down {
+	width: 13px;
+	height: 7px;
+	display: inline-block;
+	background: url('images/bulk_vehicle_arrow_down.png') no-repeat;
+}
+
+
+/*========================================================================*/
+
+
+/*Bulk Vehicle Designs*/
+
+.v-count {
+	margin-top: -3px;
+}
+
+.v-count .fa-plus-circle,
+.v-count .fa-minus-circle {
+	font-size: 15px;
+	margin-top: 2px;
+}
+
+.v-count-val {
+	padding: 3px;
+	border: 1px solid #ddd;
+	display: inline-block;
+	float: left;
+	margin-right: 6px;
+	background: #FDF9E3;
+}
+
+
+/*Vehicle Set-scroll for Accordion*/
+
+.v-accordion-scroll {
+	max-height: 250px;
+	overflow-y: scroll;
+}
+
+
+/*========================================================================*/
+
+
+/*HEHL signature/photograph upload*/
+
+.h-upload label.pin {
+	width: 25px;
+	padding: 0;
+	background: #ffffff;
+	font-size: 18px;
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.h-upload .h-img {
+	width: 70px;
+	height: 70px;
+}
+
+.h-upload-txt {
+	/*max-width: 63%;
+	display: inline-block;
+	vertical-align: middle;*/
+	width: 82%;
+	display: block;
+	vertical-align: middle;
+	float: right;
+	margin: 8px 0 0 0;
+}
+
+.h-upload-txt .txt-link {
+	max-width: 82%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.h-upload-txt i {
+	margin-left: 15px;
+}
+
+
+/*========================================================================*/
+
+
+/*For upload Btn txt color*/
+
+label.btn.txt-white {
+	color: #ffffff
+}
+
+
+/*Panel default height*/
+
+.hehl-panel-ht {
+	min-height: 220px;
+}
+
+.h-btn .btn {
+	height: 48px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.h-btn {
+	margin-bottom: 5px;
+}
+
+.h-btn .btn.btn-grey {
+	border-color: #5E6D7E;
+}
+
+.h-landline input[type='text']:first-child {
+	width: 21%;
+}
+
+.h-landline input[type='text']:nth-child(2) {
+	width: 47%;
+}
+
+
+/*.accordion .h-landline input[type='text']:nth-child(2) {
+	width: 45%;
+}*/
+
+.h-timeAt {
+	padding-left: 2px;
+	padding-right: 11px;
+}
+
+
+/*HEHL PDF and Image Icon*/
+
+.pdf-icon,
+.image-icon {
+	width: 16px;
+	height: 19px;
+	display: block;
+}
+
+.pdf-icon {
+	background: url(../images/pdf.png) no-repeat;
+}
+
+.image-icon {
+	background: url(../images/image.png) no-repeat;
+}
+
+
+/*========================================================================*/
+
+.green-r-block {
+	vertical-align: middle;
+}
+
+.green-r-block .green-radio {
+	display: inline-block;
+	margin: 0 inherit;
+	margin-left: 5px;
+	height: 17px;
+}
+
+.h-popup-scroll {
+	max-height: 466px;
+	overflow-y: auto;
+}
+
+
+/*========================================================================*/
+
+
+/*listing points with bulletin Image */
+
+.list-hehl {
+	margin: 10px;
+}
+
+.list-hehl .bulletin {
+	clear: both;
+	float: left;
+	padding: 5px 0;
+}
+
+.property-show>label {
+	margin-left: -7px
+}
+
+.property-show .chk-content {
+	margin-left: 18px;
+}
+
+
+/*========================================================================*/
+
+
+/*Add more Applicant/Co-applicant/Property/Checklist*/
+
+.add-more-block {
+	float: left;
+	max-width: 650px;
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+
+.add-more-block.full {
+	min-width: 100%;
+}
+
+.add-more-block .add-more {
+	border-right: 1px solid #EFEFEF;
+	padding: 5px 10px;
+	vertical-align: middle;
+	margin-bottom: 5px;
+	margin-right: 4px;
+}
+
+.add-more-block .add-more:last-child {
+	border-right: none;
+}
+
+.add-txt {
+	padding-right: 10px;
+	cursor: pointer;
+	float: left;
+}
+
+.add-more.active {
+	position: relative;
+	background-color: #EFEFEF;
+	border-right-color: #EFEFEF;
+}
+
+.add-more.active:after {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: -5px;
+	width: 1px;
+	color: #ffffff;
+	background: #EFEFEF;
+	border-right: 1px #EFEFEF;
+	content: ',';
+}
+
+.add-more.active .add-txt {
+	color: #F37020;
+	font-size: 14px;
+}
+
+.h-add-more {
+	margin-bottom: 0;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.h-add-more tr td {
+	vertical-align: middle !important;
+}
+
+.h-add-more .btn.btn-default.disabled {
+	opacity: 0.3;
+}
+
+.h-add-more .btn-default {
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+.h-add-more .btn.btn-default i {
+	font-weight: bold;
+}
+
+.h-add-more .list-group-item:not(:last-child) {
+	border-color: #EFEFEF;
+}
+
+.h-add-more .list-group-item.active {
+	background-color: #EFEFEF;
+	border-color: #EFEFEF;
+	padding: 3px 8px;
+}
+
+.h-add-more .list-group-item.active {
+	background-color: #EFEFEF;
+	border-color: #EFEFEF;
+	padding: 3px 8px;
+}
+
+.h-add-more .list-group-item:first-child.active {
+	border-left: 1px solid #EFEFEF;
+}
+
+.h-add-more .list-group-item.active a {
+	cursor: default;
+	text-decoration: none;
+}
+
+.h-add-more .list-group-item.active small {
+	color: #52617a;
+}
+
+.h-add-more .list-group-item i {
+	display: none;
+}
+
+.h-add-more .list-group-item.active i {
+	cursor: pointer;
+	display: inline-block;
+}
+
+.h-add-more .pr-title a i {
+	float: right;
+	margin-top: 1px;
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+.fix-width .list-group-item small {
+	display: inline-block;
+	width: 150px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+/*IE fix*/
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+	/* IE10+ specific styles go here */
+	/*Modal-popup padding bottom issue*/
+	.scroll .ie-fix,
+	.ie-fix-modal {
+		width: 100%;
+		clear: both;
+		height: 15px;
+	}
+}
+
+
+/*========================================================================*/
+
+
+/*HEHL Lead Maintenance Timeline menu*/
+
+.h-tm.t-width-1 {
+	width: 746px;
+}
+
+.h-tm.t-width-2 {
+	width: 380px;
+}
+
+.h-tm.timeline ul:first-child {
+	margin-left: 27px;
+}
+
+
+/*.h-tm .t-line {
+	width: 71%;
+}*/
+
+
+/*As per review Comment*/
+
+.h-tm .t-line {
+	width: 76%;
+}
+
+.h-tm.timeline ul:first-child li:first-child {
+	width: 30px;
+	text-align: right;
+	float: left;
+}
+
+.h-tm.timeline ul:first-child>li {
+	width: 92px;
+	float: left;
+}
+
+.h-tm-txt {
+	margin-left: 1px;
+}
+
+.h-tm-txt>li {
+	width: 92px;
+}
+
+.h-tm.timeline ul:last-child>li:last-child {
+	width: 101px;
+}
+
+
+/*========================================================================*/
+
+
+/*Header On Hover*/
+
+
+/*.on-hover-block {
+	position: absolute;
+	overflow: hidden;
+	z-index: 777;
+	color: #003f88;
+	top: -10px;
+	/*left: 171px;
+
+	width: 215px;
+	height: 75px;
+	padding: 15px 10px 10px 18px;
+	-webkit-transition: height 0.8s;
+	-moz-transition: height 0.8s;
+	transition: height 0.8s;
+	box-shadow: 0px 3px 1px #999;
+	background: #FDF9E3 url('../images/expand.png') no-repeat 100% 100%;
+}*/
+
+
+/*As per review Comment*/
+
+.on-hover-block {
+	position: absolute;
+	overflow: hidden;
+	z-index: 777;
+	color: #003f88;
+	top: -5px;
+	/* left: 171px; */
+	width: 235px;
+	height: 54px;
+	padding: 6px 10px 10px 18px;
+	-webkit-transition: height 0.8s;
+	-moz-transition: height 0.8s;
+	transition: height 0.8s;
+	box-shadow: 0px 1px 1px #aeafb0;
+	background: #f8f9fb url('../images/expand.png') no-repeat 100% 100%;
+}
+
+.on-hover-block:hover {
+	height: 250px;
+	background: #f8f9fb;
+}
+
+.on-hover-block li>span {
+	display: inline-block;
+	width: 85px;
+}
+
+.on-hover-content {
+	height: 0;
+	margin-bottom: 10px;
+	overflow: hidden;
+	-webkit-transition: height 0.8s;
+	-moz-transition: height 0.8s;
+	transition: height 0.8s;
+}
+
+.on-hover-block li {
+	padding-bottom: 5px;
+}
+
+.on-hover-content b {
+	font-size: 11px;
+}
+
+.on-hover-block:hover .on-hover-content {
+	height: 250px;
+}
+
+
+/*========================================================================*/
+
+
+/*Accordion Styles*/
+
+
+/*.accordion.h-accordion .panel-group {
+	margin-bottom: 0;
+}
+
+.accordion.h-accordion .panel-group>.panel-default>.panel-heading {
+	background: #ffffff;
+	border-bottom: 1px solid #ddd;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.accordion.h-accordion .panel-group>.panel-default {
+	border: none;
+}
+
+.accordion.h-accordion .panel-collapse .panel-body {
+	border-top: none;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.accordion.h-accordion .panel-default>.panel-heading+.panel-collapse>.panel-body {
+	padding-bottom: 0;
+}*/
+
+.h-txt-add-remove {
+	font-size: 12px;
+}
+
+
+/*========================================================================*/
+
+
+/*fa-icons for FI accept/reject*/
+
+.h-fa-check-active {
+	color: #0ab870;
+}
+
+.h-fa-times-active {
+	color: #ed1c24;
+}
+
+
+/*========================================================================*/
+
+
+/*By other Dev::FI- screen deatils*/
+
+.fiImage img {
+	width: 67px;
+	height: 40px !important;
+}
+
+#fiDetailedImage img {
+	width: 432px;
+	height: 225px;
+}
+
+.imageSelected img {
+	border: 1px solid #ccc;
+	padding: 2px;
+}
+
+.fiDetailedImage img {
+	width: 432px;
+	height: 225px;
+}
+
+
+/*========================================================================*/
+
+
+/*By other Dev::used in charges screen */
+
+.charge-group {
+	background-color: #E9EEF4;
+	padding: 5px;
+}
+
+.charge-container {
+	border-left: solid 1px #E9EEF4;
+	border-right: solid 1px #E9EEF4;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	padding-top: 5px;
+}
+
+.charge-container-last {
+	border-bottom: solid 1px #E9EEF4;
+}
+
+
+/*========================================================================*/
+
+
+/*By other Dev::file - upload-HEHL*/
+
+.file-nameOnly {
+	display: inline-block;
+	margin: 0px 5px 0px 0px;
+}
+
+.file-nameOnly aside {
+	display: none;
+}
+
+.file-nameOnly a {
+	text-decoration: underline;
+	padding: 7px;
+	cursor: pointer;
+	display: inline-block;
+	min-width: 120px;
+}
+
+
+/*========================================================================*/
+
+.query-email {
+	position: absolute;
+	right: 15px;
+	top: 32px;
+}
+
+
+/*========================================================================*/
+
+.util-lt {
+	border-radius: 0;
+	vertical-align: top;
+	background: -moz-linear-gradient(0deg, rgba(247, 247, 247, 1) 0%, rgba(247, 247, 247, 1) 92%, rgba(232, 232, 232, 1) 99%, rgba(235, 235, 235, 1) 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(247, 247, 247, 1)), color-stop(92%, rgba(247, 247, 247, 1)), color-stop(99%, rgba(232, 232, 232, 1)), color-stop(100%, rgba(235, 235, 235, 1)));
+	background: -webkit-linear-gradient(0deg, rgba(247, 247, 247, 1) 0%, rgba(247, 247, 247, 1) 92%, rgba(232, 232, 232, 1) 99%, rgba(235, 235, 235, 1) 100%);
+	background: -o-linear-gradient(0deg, rgba(247, 247, 247, 1) 0%, rgba(247, 247, 247, 1) 92%, rgba(232, 232, 232, 1) 99%, rgba(235, 235, 235, 1) 100%);
+	background: -ms-linear-gradient(0deg, rgba(247, 247, 247, 1) 0%, rgba(247, 247, 247, 1) 92%, rgba(232, 232, 232, 1) 99%, rgba(235, 235, 235, 1) 100%);
+	background: linear-gradient(90deg, rgba(247, 247, 247, 1) 0%, rgba(247, 247, 247, 1) 92%, rgba(232, 232, 232, 1) 99%, rgba(235, 235, 235, 1) 100%);
+}
+
+.util-rt {
+	border-radius: 0;
+	vertical-align: top;
+}
+
+.util-form label {
+	color: #f7941d !important;
+	font-size: 15px;
+}
+
+.util-form p {
+	margin-bottom: 0;
+	border: 1px solid #ddd;
+	font-size: 30px;
+	padding: 10px 15px;
+	color: #808080 !important;
+}
+
+.dd-menu {
+	border-color: #ffffff
+}
+
+.dd-menu>li>a {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	font-size: 14px;
+	color: #003F88;
+}
+
+.dd-menu>li>a>i {
+	position: relative;
+	width: 35px;
+	height: 30px;
+	display: inline-block;
+	line-height: 30px;
+}
+
+.dd-menu>li>a>i>i {
+	vertical-align: middle;
+}
+
+.dd-menu>li>a span {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+}
+
+.dd-menu>li>a:hover,
+.dd-menu>li>a:focus {
+	text-decoration: none;
+	color: #003F88;
+	background-color: #f5f5f5;
+}
+
+.dd-list-leave {
+	background: url(../images/dd-apply_leave.png) no-repeat;
+}
+
+.dd-list-calc {
+	background: url(../images/dd-calculator_icon.png) no-repeat;
+}
+
+.dd-list-credit-decision {
+	background: url(../images/dd-credit_decision_approved.png) no-repeat;
+}
+
+.dd-list-document {
+	background: url(../images/dd-document.png) no-repeat;
+}
+
+.dd-list-neg-area {
+	background: url(../images/dd-negative_areas.png) no-repeat;
+}
+
+.dd-list-ser-rqst {
+	background: url(../images/dd-service_request.png) no-repeat;
+}
+
+.dd-list-soa {
+	background: url(../images/dd-summarySOA.png) no-repeat;
+}
+
+.dd-list-help {
+	background: url(../images/dd-user_help_guide.png) no-repeat;
+}
+
+.dd-list-valuation {
+	background: url(../images/dd-valuation_grid.png) no-repeat;
+}
+
+.dd-list-view-salary {
+	background: url(../images/dd-view_salary.png) no-repeat;
+}
+
+.dd-list-leave,
+.dd-list-valuation {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+}
+
+.dd-list-calc {
+	display: inline-block;
+	width: 17px;
+	height: 23px;
+}
+
+.dd-list-credit-decision {
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+}
+
+.dd-list-document {
+	display: inline-block;
+	width: 20px;
+	height: 23px;
+}
+
+.dd-list-neg-area {
+	display: inline-block;
+	width: 18px;
+	height: 22px;
+}
+
+.dd-list-ser-rqst {
+	display: inline-block;
+	width: 22px;
+	height: 23px;
+}
+
+.dd-list-soa {
+	display: inline-block;
+	width: 20px;
+	height: 22px;
+}
+
+.dd-list-help {
+	display: inline-block;
+	width: 22px;
+	height: 17px;
+}
+
+.dd-list-view-salary {
+	display: inline-block;
+	width: 29px;
+	height: 30px;
+}
+
+.divAsInput {
+	border: 1px solid #dadada;
+	height: 31px;
+	border-radius: 2px;
+	background-color: #eee;
+	padding: 6px 12px;
+}
+
+
+/*========================================================================*/
+
+
+/*financials Tab - Sales_HEHL CAM*/
+
+.particularfirstradio {
+	width: 50%;
+	float: left;
+}
+
+.particularsecondradio {
+	width: 50%;
+	float: left;
+	margin-top: 3px ! important;
+}
+
+.txt-color-12 {
+	color: #52617a;
+}
+
+.txt-align {
+	text-align: center;
+}
+
+
+/*========================================================================*/
+
+
+/*financials Tab - Sales_HEHL CAM - Latest and Previous Years*/
+
+.margin-right-ten-percent {
+	margin-right: 10%;
+}
+
+.margin-left-ten-percent {
+	margin-left: 10%;
+}
+
+.width60 {
+	width: 60px;
+}
+
+.particularsyesno {
+	width: 112px;
+	margin: auto;
+}
+
+.salarycompinputdiv {
+	width: 70%;
+	float: left;
+}
+
+.salarycomp-plusicon-div {
+	width: 60px;
+	float: right;
+}
+
+
+/*====================================== manage query */
+
+.querynotify {
+	margin-top: -1px;
+	max-height: 250px;
+	overflow-y: scroll;
+	width: 259px;
+}
+
+.querynotifycaret {
+	float: right;
+	margin-top: 6px;
+	margin-right: -5px;
+}
+
+.floatleft {
+	float: left;
+	margin-right: 5px;
+}
+
+.querytruncate {
+	display: inline-block;
+	width: 262px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+/*========================================================================*/
+
+
+/*lt-block normal styles without animation*/
+
+.content-wrapper {
+	position: relative;
+	margin: 10px 15px 0 15px;
+}
+
+.sidebar-wrapper:not(.hide)+.content-wrapper {
+	margin: 10px 0px 0 15px;
+	width: 733px;
+}
+
+.lt-block .sidebar-wrapper:not(.hide)+.content-wrapper {
+	margin: 10px 15px 0 15px;
+	width: 521px;
+}
+
+.lt-block-less .sidebar-wrapper:not(.hide)+.content-wrapper {
+	margin: 10px 15px 0 15px;
+	width: 445px;
+}
+
+.sidebar-wrapper+.content-wrapper {
+	margin: 10px 0px 0 15px;
+	width: 868px;
+}
+
+.lt-block .sidebar-wrapper+.content-wrapper {
+	margin: 10px 15px 0 15px;
+	width: 656px;
+}
+
+
+/*tt-block normal styles without animation*/
+
+
+/* To Enalbe Document SlideBar */
+
+.p-animate {
+	overflow: hidden;
+	-webkit-transition: width 0.8s, border 0.5s;
+	-moz-transition: width 0.8s, border 0.5s;
+	transition: width 0.8s, border 0.5s;
+}
+
+.hideAnimate.p-animate {
+	width: 0;
+	border: none;
+}
+
+.showAnimate.p-animate {
+	border: 1px solid #ddd;
+	width: 135px;
+}
+
+
+/* To hide Document sliderBar */
+
+.hideAnimate .s-area-scroll {
+	overflow: hidden;
+}
+
+
+/* After Hidden Document Slider Bar, A arrow icon has to be enabled for view hidden Document */
+
+.sidebar-wrapper.hideAnimate+.content-wrapper .s-toggle-icon {
+	display: block;
+	position: absolute;
+	width: 19px;
+	height: 30px;
+	left: -25px;
+	border: 1px solid #ddd;
+	opacity: 1;
+}
+
+
+/*
+*Silde Bar + content area : No right panel;
+*No rt-block
+*No lt-block
+*/
+
+.p-animate.sidebar-wrapper:not(.hideAnimate)+.content-wrapper,
+.p-animate.sidebar-wrapper:not(.showAnimate)+.content-wrapper {
+	margin: 10px 0px 0 15px;
+	width: 733px;
+	-webkit-transition: width 0.8s;
+	-moz-transition: width 0.8s;
+	transition: width 0.8s;
+}
+
+.p-animate.sidebar-wrapper:not(.showAnimate)+.content-wrapper {
+	-webkit-transition: width 0.8s;
+	-moz-transition: width 0.8s;
+	transition: width 0.8s;
+}
+
+.p-animate.hideAnimate.sidebar-wrapper+.content-wrapper {
+	width: 868px;
+}
+
+.p-animate.showAnimate.sidebar-wrapper+.content-wrapper {
+	width: 733px;
+}
+
+
+/*
+*Silde Bar + content area
+*rt-block
+*lt-block
+*/
+
+.lt-block .p-animate.sidebar-wrapper:not(.hideAnimate)+.content-wrapper,
+.lt-block .p-animate.sidebar-wrapper:not(.showAnimate)+.content-wrapper {
+	margin: 10px 15px 0 15px;
+	width: 521px;
+	-webkit-transition: width 0.8s;
+	-moz-transition: width 0.8s;
+	transition: width 0.8s;
+}
+
+.lt-block .p-animate.sidebar-wrapper:not(.showAnimate)+.content-wrapper {
+	-webkit-transition: width 0.8s;
+	-moz-transition: width 0.8s;
+	transition: width 0.8s;
+}
+
+.lt-block .p-animate.hideAnimate.sidebar-wrapper+.content-wrapper {
+	width: 656px
+}
+
+.lt-block .p-animate.showAnimate.sidebar-wrapper+.content-wrapper {
+	width: 521px;
+}
+
+
+/*
+*Silde Bar + content area;
+*rt-block
+*lt-block
+*/
+
+.lt-block .p-animate.sidebar-wrapper:not(.hideAnimate)+.content-wrapper,
+.lt-block .p-animate.sidebar-wrapper:not(.showAnimate)+.content-wrapper,
+.lt-block-less .p-animate.sidebar-wrapper:not(.hideAnimate)+.content-wrapper {
+	margin: 10px 15px 0 15px;
+	width: 521px;
+	-webkit-transition: width 0.8s;
+	-moz-transition: width 0.8s;
+	transition: width 0.8s;
+}
+
+
+/*For extra right panel*/
+
+.lt-block-less .p-animate.sidebar-wrapper:not(.hideAnimate)+.content-wrapper {
+	width: 445px;
+}
+
+.lt-block .p-animate.sidebar-wrapper:not(.showAnimate)+.content-wrapper,
+.lt-block-less .p-animate.sidebar-wrapper:not(.showAnimate)+.content-wrapper {
+	-webkit-transition: width 0.8s;
+	-moz-transition: width 0.8s;
+	transition: width 0.8s;
+}
+
+.lt-block .p-animate.hideAnimate.sidebar-wrapper+.content-wrapper {
+	width: 656px
+}
+
+.lt-block .p-animate.showAnimate.sidebar-wrapper+.content-wrapper {
+	width: 521px;
+}
+
+
+/*For extra right panel*/
+
+.lt-block-less .p-animate.hideAnimate.sidebar-wrapper+.content-wrapper {
+	width: 580px;
+}
+
+
+/*
+*-->rt-block- show-hide
+*Silde Bar + content area;
+*lt-block
+*/
+
+
+/* After Hidden rigth panel: Providing Option to re-open Right Panel; */
+
+.rt-hide .rt-hidden-bar {
+	position: absolute;
+	width: 20px;
+	top: -1px;
+	bottom: 0;
+	left: -20px;
+	z-index: 888;
+	padding: 0;
+	background-color: #e6e6e6;
+}
+
+.rt-show .rt-hidden-bar {
+	position: absolute;
+	width: 20px;
+	top: -1px;
+	right: 0;
+	z-index: 888;
+	padding: 0;
+	background-color: #e6e6e6;
+}
+
+.rt-hidden-bar .fa {
+	width: 20px;
+	height: 55px;
+	display: block;
+	line-height: 55px;
+	background: #1d9d74;
+	color: #ffffff;
+	font-size: 20px;
+}
+
+.rt-hidden-bar .fa:hover,
+.rt-hidden-bar:hover .fa {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+
+/*On rt-panel hidden : Below properties has to be modified from existing styles*/
+
+.rt-hide .block-space-provider {
+	display: none;
+}
+
+
+/* rt-block animation  to show it*/
+
+.rt-show .rt-block,
+.rt-show .rt-block-less,
+.rt-hide .rt-block,
+.rt-hide .rt-block-less {
+	-webkit-transition: width 0.8s;
+	-moz-transition: width 0.8s;
+	transition: width 0.8s;
+}
+
+.rt-show .rt-block {
+	width: 212px;
+}
+
+.rt-show .rt-block-less {
+	width: 289px;
+}
+
+.rt-hide .rt-block,
+.rt-hide .rt-block-less {
+	width: 0px;
+}
+
+.rt-show .rt-title {
+	overflow: hidden;
+}
+
+.rt-hide .rt-title,
+.rt-hide .rt-content,
+.rt-hide .rt.tool-bar {
+	overflow: hidden;
+}
+
+
+/*Resetting lt-block irrespective of rt-block whilest hiddend*/
+
+.rt-hide .lt-block,
+.rt-hide .lt-block-less {
+	width: 880px;
+}
+
+.rt-hide .lt-block .p-animate.sidebar-wrapper:not(.hideAnimate)+.content-wrapper,
+.rt-hide .lt-block-less .p-animate.sidebar-wrapper:not(.hideAnimate)+.content-wrapper {
+	width: 714px;
+}
+
+.rt-hide .lt-block .p-animate.hideAnimate.sidebar-wrapper+.content-wrapper,
+.rt-hide .lt-block-less .p-animate.hideAnimate.sidebar-wrapper+.content-wrapper {
+	margin: 10px 15px 0 15px;
+	width: 848px;
+}
+
+#map-container {
+	position: absolute;
+	left: 0px;
+	top: 46px;
+	right: 2px;
+	bottom: 2px;
+	border: 1px solid #cccccc;
+}
+
+
+/*Post sanction Repyament Slider*/
+
+.vf.reciept-format .reciept-left {
+	width: 100%;
+}
+
+.vf.reciept-format .reciept-left:hover {
+	width: 300px;
+}
+
+.vf .reclipt-height {
+	max-height: 400px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+
+/*Post sacntc : right panel grouping*/
+
+.post-rt-wrap {
+	background: #f5f5f5;
+	display: inline-block;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+
+/*Post sancton: Other details- Bulk vehicle - slider*/
+
+.main-menu {
+	margin-left: 10px;
+}
+
+.m-title {
+	padding: 5px 10px 5px 5px;
+	border-bottom: 1px solid #EFEFEF;
+	cursor: pointer;
+	z-index: 2;
+	font-size: 14px;
+	text-decoration: none;
+	color: #003F88;
+}
+
+.m-title.active {
+	background: #f3f4f6;
+}
+
+.s-title {
+	cursor: pointer;
+	padding: 5px 15px;
+	z-index: 1;
+	text-decoration: none;
+	font-size: 12px;
+	color: #52617a;
+	background: #F9F9F9;
+	margin-top: 1px;
+}
+
+.sub-menu {
+	overflow-y: hidden;
+	max-height: 500px;
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.sub-menu.closed {
+	max-height: 0;
+}
+
+.sub-tree {
+	background: rgba(255, 255, 255, 0.72);
+	padding: 4px 10px;
+	overflow-y: auto;
+	max-height: 500px;
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.sub-tree.hide {
+	max-height: 0;
+}
+
+
+/*Post sanc rt-repayment icons*/
+
+.post-rt .green-tick-1 {
+	margin-right: 0;
+}
+
+.post-rt .red-cross-mark-1 {
+	margin-left: 1px;
+	height: 17px;
+	vertical-align: top;
+}
+
+.post-rt .cross-mark-disabled-1 {
+	margin-left: 0;
+	height: 16px;
+}
+
+
+/*HEHL - Tranche- initiate waiver*/
+
+.waiver-success {
+	background-color: #FDF9E3;
+	padding: 3px 5px 0px 5px;
+}
+
+
+/*txt-left*/
+
+.txt-left {
+	text-align: left !important;
+}
+
+[animate-on-change] {
+	-webkit-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	-moz-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	-ms-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	-o-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	/* easeOutQuad */
+	-webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	-moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	-ms-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	-o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	/* easeOutQuad */
+}
+
+[animate-on-change].changed {
+	transform: scale(0.7);
+	-ms-transform: scale(0.7);
+	-webkit-transform: scale(0.7);
+	transition-duration: 250ms;
+	-webkit-transition-duration: 250ms;
+	opacity: 0;
+}
+
+.widget-title .custom-panel-title {
+	font-size: 14px;
+	color: #003f88;
+	margin-top: 0;
+	/*margin-bottom: 20px;*/
+	margin-bottom: 16px;
+}
+
+.brdr-rht-1 {
+	border-right: 1px solid #BFB8B8;
+}
+
+.disbusreDetails {
+	padding: 10px;
+	border: 1px solid #E3E3E3;
+}
+
+.disbusreDetails .accordion .panel-default>.panel-heading+.panel-collapse>.panel-body {
+	padding: 0px;
+}
+
+.break-word-only {
+	word-break: break-word;
+}
+
+.table .assigned-leads {
+	border-left: 3px solid #0ab870;
+	margin-left: -8px
+}
+
+.table .pending-leads {
+	border-left: 3px solid #ed1c24;
+	margin-left: -8px
+}
+
+label.emicalculator-label {
+	font-weight: normal;
+	color: #003f88;
+}
+
+.disabled-checkbox .rc-label:before {
+	cursor: not-allowed;
+}
+
+.pending-leads-indication,
+.assigned-leads-indication
+.no-action-leads-indication {
+	float: left;
+}
+
+.assigned-leads-indication span {
+	width: 16px;
+	float: left;
+}
+
+.table .assigned-leads {
+	border-left: 3px solid #0ab870;
+	margin-left: -8px
+}
+
+.table .pending-leads {
+	border-left: 3px solid #ed1c24;
+	margin-left: -8px
+}
+
+.table .no-action-leads {
+	border-left: 3px solid #7EA9A9;
+	margin-left: -8px;
+}
+
+label.emicalculator-label {
+	font-weight: normal;
+	color: #003f88;
+}
+
+.disabled-checkbox .rc-label:before {
+	cursor: not-allowed;
+}
+
+.pending-leads-indication,
+.assigned-leads-indication {
+	float: left;
+}
+
+.assigned-leads-indication span {
+	width: 16px;
+	float: left;
+	height: 4px;
+	background-color: #0ab870;
+	margin: 6px 4px;
+}
+
+.pending-leads-indication span {
+	width: 16px;
+	float: left;
+	height: 4px;
+	background-color: #ed1c24;
+	margin: 6px 4px;
+}
+.no-action-leads-indication span{
+	width: 16px;
+	float: left;
+	height: 4px;
+	background-color: #7EA9A9;
+	margin: 6px 4px;
+}
+
+
+/*  vehicle*/
+
+.aggrementNo {
+	margin-top: 7px;
+	float: left;
+	margin: 6px 4px;
+}
+
+.caps-lock-notify {
+	float: right;
+	margin-top: -25px;
+	margin-right: 12px;
+	color: orange;
+}
+
+.table-format tbody tr td.nowrap {
+	white-space: nowrap;
+}
+
+.fi-images-list {  }
+.credit-decision-btn { padding: 6px 6px;}
+
+/* HEHL Vendor Portal */
+.list-technicalEval{
+	margin-right: 2px;
+	margin-left: 5px;
+}
+.accordion-heading-color{
+	  background-color: #f5f5f5
+}
+
+
+/**
+ * For the correct positioning of the placeholder element, the dnd-list and
+ * it's children must have position: relative
+ */
+.simpleDemo ul[dnd-list],
+.simpleDemo ul[dnd-list] > li {
+	position: relative;
+}
+
+/**
+ * The dnd-list should always have a min-height,
+ * otherwise you can't drop to it once it's empty
+ */
+.simpleDemo ul[dnd-list] {
+    min-height: 42px;
+    padding-left: 0px;
+}
+
+/**
+ * The dndDraggingSource class will be applied to
+ * the source element of a drag operation. It makes
+ * sense to hide it to give the user the feeling
+ * that he's actually moving it.
+ */
+.simpleDemo ul[dnd-list] .dndDraggingSource {
+    display: none;
+}
+
+/**
+ * An element with .dndPlaceholder class will be
+ * added to the dnd-list while the user is dragging
+ * over it.
+ */
+.simpleDemo ul[dnd-list] .dndPlaceholder {
+    display: block;
+    background-color: #ddd;
+    min-height: 42px;
+}
+
+/**
+ * The dnd-lists's child elements currently MUST have
+ * position: relative. Otherwise we can not determine
+ * whether the mouse pointer is in the upper or lower
+ * half of the element we are dragging over. In other
+ * browsers we can use event.offsetY for this.
+ */
+.simpleDemo ul[dnd-list] li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+}
+
+/**
+ * Show selected elements in green
+ */
+.simpleDemo ul[dnd-list] li.selected {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+.setHeight-400{
+	height:400px;
+	overflow:auto;
+}
+
+.setHeight-120{
+	height:120px;
+	
+}
+.calc_td_btn {
+    width: 30%;
+    text-align: center;
+}
+
+.calculator {
+    width: 28% !important;
+}
+.calc_btn {
+	background: #777;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: 1px 0px 2px #111 inset;
+    color: #fff;
+    width: 50px;
+}
+.setHeight-110{
+	height:110px;
+
+}
+.setHeight-100{
+	height:110px;
+    overflow:auto;
+}
+.green-tick-HEHL {
+	display: inline-block;
+	background: url(../images/green_tick.png) no-repeat;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	background-size: 20px 20px;
+
+}
+
+.red-cross-mark-HEHL {
+	display: inline-block;
+	background: url(../images/my_pdd_tick_not_ok_img.png) no-repeat;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	background-size: 20px 20px;
+}
