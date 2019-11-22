@@ -2,7 +2,7 @@
     "name": "status-monitor-api",
     "main": "server.js",
     "dependencies": {
-        "angular": "^1.6.6",
+        "angular": "^1.7.9",
         "angular-aria": "^1.6.6",
         "angular-cookies": "^1.6.6",
         "angular-paging": "^2.2.2",
